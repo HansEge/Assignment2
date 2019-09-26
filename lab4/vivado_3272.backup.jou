@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 24 16:18:16 2019
+# Process ID: 3272
+# Current directory: C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/labs/lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1764 C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\labs\lab4\lab4.xpr
+# Log file: C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/labs/lab4/vivado.log
+# Journal file: C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/labs/lab4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/labs/lab4/lab4.xpr
+update_compile_order -fileset sources_1

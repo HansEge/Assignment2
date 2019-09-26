@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Sat Sep 21 12:50:42 2019
+# Process ID: 16528
+# Current directory: C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/labs/lab4/lab4.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/labs/lab4/lab4.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/labs/lab4/lab4.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

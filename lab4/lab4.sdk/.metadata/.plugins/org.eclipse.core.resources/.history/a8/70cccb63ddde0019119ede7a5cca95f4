@@ -1,0 +1,255 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "led_ip.h"
+#include "XScuTimer.h"
+
+//====================================================
+
+// Define matrix size
+#define MSIZE 4
+
+// Define VectorArray to be an M by M- matrix, where M = MSIZE
+typedef union{
+	unsigned char comp[MSIZE];
+	unsigned int vect;
+} vectorType;
+
+typedef vectorType vectorArray[MSIZE];
+
+// Global variables, to make it possible to use in "command"-functions
+XGpio dip, push;
+int i, psb_check, dip_check;
+XScuTimer Timer; /* Cortex A9 SCU Private Timer Instance */
+
+vectorArray aInst, pInst, bTInst;
+
+#define ONE_SECOND 325000000 // half of the CPU clock speed
+
+// PS Timer related definitions
+XScuTimer_Config *ConfigPtr;
+XScuTimer *TimerInstancePtr = &Timer;
+
+
+// "Helper"-function prototypes
+void execute_command_1();
+void execute_command_2();
+void execute_command_3();
+void execute_command_4();
+void writeValueToLEDs(int val);
+
+
+// functions for exercise 4)
+void setInputMatrices();
+void displayMatrix(vectorArray);
+void displayMatrixRow(vectorArray, int);
+multiMatrixSoft(vectorArray, vectorArray, vectorArray);
+
+
+int main (void) 
+{
+	//initialize timer
+	ConfigPtr = XScuTimer_LookupConfig (XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+	s32 Status = XScuTimer_CfgInitialize (TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS){
+		xil_printf("Timer init() failed\r\n");
+	return XST_FAILURE;
+	}
+
+	// Load timer with delay in multiple of ONE_SECOND
+	XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
+	// Set AutoLoad mode
+	XScuTimer_EnableAutoReload(TimerInstancePtr);
+
+   xil_printf("-- Start of the Program --\r\n");
+ 
+   XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID); // Modify this
+   XGpio_SetDataDirection(&dip, 1, 0xffffffff);
+	
+   XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID); // Modify this
+   XGpio_SetDataDirection(&push, 1, 0xffffffff);
+	
+
+   //Prompt user for command
+   xil_printf(" \r\n");
+   xil_printf("Commands:\r\n");
+   xil_printf("1 - Set binary value of LED by reading switch input.\r\n");
+   xil_printf("2 - Timer counts using red LEDs.\r\n");
+   xil_printf("3 - Matrix multiplication3.\r\n");
+
+   int userInput = inbyte();
+   xil_printf("Received: %d\r\n", userInput);
+
+   switch(userInput)
+   {
+   case (int)'1':
+		xil_printf("Received command 1\r\n");
+   	   	execute_command_1();
+		break;
+   case (int)'2':
+   		xil_printf("Received command 2\r\n");
+   	    execute_command_2();
+   		break;
+   case (int)'3':
+   		xil_printf("Received command 3\r\n");
+   	    execute_command_3();
+   		break;
+   case (int)'4':
+   		xil_printf("Received command 4\r\n");
+   	    execute_command_4();
+   		break;
+   default:
+	   xil_printf("Received unknown command.");
+	   break;
+   }
+}
+
+
+
+void execute_command_1()
+{
+	xil_printf("Executing command 1\r\n");
+	while(1)
+	{
+		 dip_check = XGpio_DiscreteRead(&dip, 1);
+		 //xil_printf("DIP Switch Status %x\r\n", dip_check);
+		 writeValueToLEDs(dip_check);
+
+	}
+}
+
+void execute_command_2()
+{
+	xil_printf("Executing command 2\r\n");
+	int counter = 0;
+	while(1)
+	{
+		xil_printf("Counter: %d\r\n", counter);
+		writeValueToLEDs(counter);
+
+		// Start the timer
+		XScuTimer_Start(TimerInstancePtr);
+
+		// Wait until timer expires
+		while(!XScuTimer_IsExpired(TimerInstancePtr));
+
+		// clear status bit
+		XScuTimer_ClearInterruptStatus(TimerInstancePtr);
+
+		counter++;
+
+		// Timer auto-enables
+
+	}
+}
+
+void execute_command_3()
+{
+	xil_printf("Executing command 3\r\n");
+	xil_printf("Matrix multiplication\r\n");
+	setInputMatrices();
+
+	xil_printf("A = \r\n");
+	displayMatrix(aInst);
+
+	xil_printf("bT = \r\n");
+	displayMatrix(bTInst);
+
+	xil_printf("Calculating P \r\n");
+	multiMatrixSoft();
+	while(1)
+	{
+	}
+}
+
+void execute_command_4()
+{
+	xil_printf("Executing command 4\r\n");
+	xil_printf("Not ipmlemented yet.\r\n");
+	while(1)
+	{
+	}
+}
+
+
+void writeValueToLEDs(int val)
+{
+	LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR, 0, val);
+}
+
+void setInputMatrices()
+{
+	//Set matrix a
+	// A, row 0
+	aInst[0].comp[0] = 1;
+	aInst[0].comp[1] = 2;
+	aInst[0].comp[2] = 3;
+	aInst[0].comp[3] = 4;
+
+	// A, row 1
+	aInst[1].comp[0] = 5;
+	aInst[1].comp[1] = 6;
+	aInst[1].comp[2] = 7;
+	aInst[1].comp[3] = 8;
+
+	// A, row 2
+	aInst[2].comp[0] = 9;
+	aInst[2].comp[1] = 10;
+	aInst[2].comp[2] = 11;
+	aInst[2].comp[3] = 12;
+
+	// A, row 3
+	aInst[3].comp[0] = 13;
+	aInst[3].comp[1] = 14;
+	aInst[3].comp[2] = 15;
+	aInst[3].comp[3] = 16;
+
+	//Set matrix bT
+	// A, row 0
+	bTInst[0].comp[0] = 1;
+	bTInst[0].comp[1] = 1;
+	bTInst[0].comp[2] = 1;
+	bTInst[0].comp[3] = 1;
+
+	//Set matrix bT
+	// A, row 1
+	bTInst[1].comp[0] = 2;
+	bTInst[1].comp[1] = 2;
+	bTInst[1].comp[2] = 2;
+	bTInst[1].comp[3] = 2;
+
+	//Set matrix bT
+	// A, row 2
+	bTInst[2].comp[0] = 3;
+	bTInst[2].comp[1] = 3;
+	bTInst[2].comp[2] = 3;
+	bTInst[2].comp[3] = 3;
+
+	//Set matrix bT
+	// A, row 3
+	bTInst[3].comp[0] = 4;
+	bTInst[3].comp[1] = 4;
+	bTInst[3].comp[2] = 4;
+	bTInst[3].comp[3] = 4;
+}
+
+void displayMatrix(vectorArray matrix)
+{
+	xil_printf("[\r\n");
+	displayMatrixRow(matrix,0);
+	displayMatrixRow(matrix,1);
+	displayMatrixRow(matrix,2);
+	displayMatrixRow(matrix,3);
+	xil_printf("]\r\n");
+
+}
+
+void displayMatrixRow(vectorArray matrix, int row)
+{
+	xil_printf("%d %d %d %d \r\n", matrix[row].comp[0], matrix[row].comp[1], matrix[row].comp[2], matrix[row].comp[3]);
+}
+
+multiMatrixSoft(vectorArray in1, vectorArray in2, vectorArray out)
+{
+	int i = 0;
+	int m = sizeof(in1)/sizeof(in1[0]);
+}
