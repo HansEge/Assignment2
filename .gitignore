@@ -429,8 +429,8 @@ TSWLatexianTemp*
 */*/bd/*/ip/*/*/
 */*/*/bd/*/ip/*/*/
 
-*/*/bd/*/ip/*/*.vhd
-*/*/*/bd/*/ip/*/*.vhd
+#*/*/bd/*/ip/*/*.vhd
+#*/*/*/bd/*/ip/*/*.vhd
 
 */*/bd/*/ip/*/*.xml
 */*/*/bd/*/ip/*/*.xml
