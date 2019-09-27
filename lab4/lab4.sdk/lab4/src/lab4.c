@@ -2,6 +2,7 @@
 #include "xgpio.h"
 #include "led_ip.h"
 #include "XScuTimer.h"
+#include "matrix_ip.h"
 
 //====================================================
 
@@ -42,7 +43,10 @@ void writeValueToLEDs(int val);
 void setInputMatrices();
 void displayMatrix(vectorArray);
 void displayMatrixRow(vectorArray, int);
-multiMatrixSoft(vectorArray, vectorArray, vectorArray);
+void multiMatrixSoft(vectorArray, vectorArray, vectorArray);
+
+// functions for exerciser 5)
+void multiMatrixHard(vectorArray, vectorArray, vectorArray);
 
 
 int main (void) 
@@ -155,7 +159,7 @@ void execute_command_3()
 	displayMatrix(bTInst);
 
 	xil_printf("Calculating P \r\n");
-	multiMatrixSoft(aInst, bTInst, pInst);
+	multiMatrixHard(aInst, bTInst, pInst);
 
 	xil_printf("P = \r\n");
 	displayMatrix(pInst);
@@ -251,7 +255,7 @@ void displayMatrixRow(vectorArray matrix, int row)
 	xil_printf("%d %d %d %d \r\n", matrix[row].comp[0], matrix[row].comp[1], matrix[row].comp[2], matrix[row].comp[3]);
 }
 
-multiMatrixSoft(vectorArray in1, vectorArray in2, vectorArray out)
+void multiMatrixSoft(vectorArray in1, vectorArray in2, vectorArray out)
 {
 	for (int row = 0 ; row < MSIZE; row++)
 	{
@@ -264,4 +268,25 @@ multiMatrixSoft(vectorArray in1, vectorArray in2, vectorArray out)
 				}
 			}
 	}
+};
+
+void multiMatrixHard(vectorArray in1, vectorArray in2, vectorArray out)
+{
+	for (int row = 0 ; row < MSIZE; row++)
+		{
+			for (int col = 0 ; col < MSIZE; col++)
+				{
+					xil_printf("[%d,%d]\r\n", row, col);
+					for (int i = 0 ; i < MSIZE ; i++)
+					{
+						Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG0_OFFSET, in1[row].vect);
+						Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG1_OFFSET, in2[col].vect);
+						out[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG2_OFFSET);
+					}
+				}
+		}
+
+	//Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG0_OFFSET, in1[row].vect);
+	//Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG1_OFFSET, in2[col].vect);
+	//out[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG2_OFFSET);
 }
