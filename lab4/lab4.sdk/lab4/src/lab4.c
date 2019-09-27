@@ -159,8 +159,8 @@ void execute_command_3()
 	displayMatrix(bTInst);
 
 	xil_printf("Calculating P \r\n");
-	multiMatrixHard(aInst, bTInst, pInst);
-
+	//multiMatrixHard(aInst, bTInst, pInst);
+	multiMatrixSoft(aInst, bTInst,pInst);
 	xil_printf("P = \r\n");
 	displayMatrix(pInst);
 	while(1)
@@ -213,29 +213,29 @@ void setInputMatrices()
 	//Set matrix bT
 	// A, row 0
 	bTInst[0].comp[0] = 1;
-	bTInst[0].comp[1] = 1;
-	bTInst[0].comp[2] = 1;
-	bTInst[0].comp[3] = 1;
+	bTInst[0].comp[1] = 2;
+	bTInst[0].comp[2] = 3;
+	bTInst[0].comp[3] = 4;
 
 	//Set matrix bT
 	// A, row 1
-	bTInst[1].comp[0] = 2;
+	bTInst[1].comp[0] = 1;
 	bTInst[1].comp[1] = 2;
-	bTInst[1].comp[2] = 2;
-	bTInst[1].comp[3] = 2;
+	bTInst[1].comp[2] = 3;
+	bTInst[1].comp[3] = 4;
 
 	//Set matrix bT
 	// A, row 2
-	bTInst[2].comp[0] = 3;
-	bTInst[2].comp[1] = 3;
+	bTInst[2].comp[0] = 1;
+	bTInst[2].comp[1] = 2;
 	bTInst[2].comp[2] = 3;
-	bTInst[2].comp[3] = 3;
+	bTInst[2].comp[3] = 4;
 
 	//Set matrix bT
 	// A, row 3
-	bTInst[3].comp[0] = 4;
-	bTInst[3].comp[1] = 4;
-	bTInst[3].comp[2] = 4;
+	bTInst[3].comp[0] = 1;
+	bTInst[3].comp[1] = 2;
+	bTInst[3].comp[2] = 3;
 	bTInst[3].comp[3] = 4;
 }
 
@@ -264,7 +264,7 @@ void multiMatrixSoft(vectorArray in1, vectorArray in2, vectorArray out)
 				xil_printf("[%d,%d]\r\n", row, col);
 				for (int i = 0 ; i < MSIZE ; i++)
 				{
-					out[row].comp[col] += in1[row].comp[i] * in2[i].comp[col];
+					out[row].comp[col] += in1[row].comp[i] * in2[row].comp[i];
 				}
 			}
 	}
@@ -277,12 +277,11 @@ void multiMatrixHard(vectorArray in1, vectorArray in2, vectorArray out)
 			for (int col = 0 ; col < MSIZE; col++)
 				{
 					xil_printf("[%d,%d]\r\n", row, col);
-					for (int i = 0 ; i < MSIZE ; i++)
-					{
-						Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG0_OFFSET, in1[row].vect);
-						Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG1_OFFSET, in2[col].vect);
-						out[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG2_OFFSET);
-					}
+
+					Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG0_OFFSET, in1[row].vect);
+					Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG1_OFFSET, in2[col].vect);
+					out[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG2_OFFSET);
+
 				}
 		}
 
