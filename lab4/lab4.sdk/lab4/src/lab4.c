@@ -64,13 +64,15 @@ int main (void)
 	// Set AutoLoad mode
 	XScuTimer_EnableAutoReload(TimerInstancePtr);
 
+	 XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID); // Modify this
+	   XGpio_SetDataDirection(&dip, 1, 0xffffffff);
+
+	   XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID); // Modify this
+	   XGpio_SetDataDirection(&push, 1, 0xffffffff);
+
    xil_printf("-- Start of the Program --\r\n");
  
-   XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID); // Modify this
-   XGpio_SetDataDirection(&dip, 1, 0xffffffff);
-	
-   XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID); // Modify this
-   XGpio_SetDataDirection(&push, 1, 0xffffffff);
+
 	
 
    //Prompt user for command
@@ -158,11 +160,30 @@ void execute_command_3()
 	xil_printf("bT = \r\n");
 	displayMatrix(bTInst);
 
-	xil_printf("Calculating P \r\n");
-	//multiMatrixHard(aInst, bTInst, pInst);
+	// Multiply matrices in SW.
+	xil_printf("Calculating P in SW\r\n");
+	int timeElapsed_SW;
+	XScuTimer_Start(TimerInstancePtr); 	// Start the timer
 	multiMatrixSoft(aInst, bTInst,pInst);
+	timeElapsed_SW = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time
 	xil_printf("P = \r\n");
 	displayMatrix(pInst);
+
+	// Multiply matrices in HW.
+	setInputMatrices(); // Make sure that matrices are "reset".
+	xil_printf("Calculating P in HW\r\n");
+	int timeElapsed_HW;
+	XScuTimer_Start(TimerInstancePtr); 	// Start the timer
+	multiMatrixHard(aInst, bTInst, pInst);
+	timeElapsed_SW = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time
+	xil_printf("P = \r\n");
+	displayMatrix(pInst);
+
+	xil_printf("Multiplication times:\r\n");
+	xil_printf("SW: %d\r\n",timeElapsed_SW);
+	xil_printf("HW: %d\r\n",timeElapsed_HW);
+
+
 	while(1)
 	{
 	}
