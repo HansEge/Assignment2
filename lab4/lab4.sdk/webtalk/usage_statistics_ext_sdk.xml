@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_sdk.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri Sep 27 14:22:44 2019'>
+<webTalkData  fileName='usage_statistics_ext_sdk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat Sep 28 12:30:01 2019'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="false" description="" />
   <keyValuePair key="build_version" value="2017.2" description="" />
-  <keyValuePair key="date_generated" value="2019-09-27 14:22:38" description="" />
+  <keyValuePair key="date_generated" value="2019-09-28 12:29:54" description="" />
   <keyValuePair key="os_platform" value="amd64" description="" />
   <keyValuePair key="product_version" value="SDK v2017.2" description="" />
-  <keyValuePair key="project_id" value="2017.2_6" description="" />
-  <keyValuePair key="project_iteration" value="6" description="" />
-  <keyValuePair key="random_id" value="qd00mhlpm1orvubvknvh6d33up" description="" />
-  <keyValuePair key="registration_id" value="qd00mhlpm1orvubvknvh6d33up" description="" />
+  <keyValuePair key="project_id" value="2017.2_3" description="" />
+  <keyValuePair key="project_iteration" value="3" description="" />
+  <keyValuePair key="random_id" value="broiti2i682i1cgkm6vrmpnurn" description="" />
+  <keyValuePair key="registration_id" value="broiti2i682i1cgkm6vrmpnurn" description="" />
   <keyValuePair key="route_design" value="NA" description="" />
   <keyValuePair key="target_device" value="NA" description="" />
   <keyValuePair key="target_family" value="NA" description="" />
@@ -27,14 +27,7 @@
   <keyValuePair key="total_processors" value="1" description="" />
  </section>
  <section name="sdk" level="1" order="3" description="">
-  <section name="bsp/1569585814305" level="2" order="1" description="">
-   <keyValuePair key="apptemplate" value="null" description="" />
-   <keyValuePair key="hwid" value="1569584273113" description="" />
-   <keyValuePair key="os" value="standalone" description="" />
-   <keyValuePair key="recordtype" value="BSPCreation" description="" />
-   <keyValuePair key="uid" value="1569585814305" description="" />
-  </section>
-  <section name="bsp/1569586958850" level="2" order="2" description="">
+  <section name="bsp/1569666594706" level="2" order="1" description="">
    <keyValuePair key="bootgencount" value="0" description="" />
    <keyValuePair key="crosstriggcount" value="0" description="" />
    <keyValuePair key="debugcount" value="0" description="" />
@@ -44,7 +37,7 @@
    <keyValuePair key="recordtype" value="ToolUsage" description="" />
    <keyValuePair key="uid" value="NA" description="" />
   </section>
-  <section name="hardware/1569584273113" level="2" order="3" description="">
+  <section name="hardware/1569588464067" level="2" order="2" description="">
    <keyValuePair key="apptemplate" value="NA" description="" />
    <keyValuePair key="arch" value="zynq" description="" />
    <keyValuePair key="device" value="7z010" description="" />
@@ -54,7 +47,7 @@
    <keyValuePair key="os" value="NA" description="" />
    <keyValuePair key="processors" value="2" description="" />
    <keyValuePair key="recordtype" value="HWCreation" description="" />
-   <keyValuePair key="uid" value="1569584273113" description="" />
+   <keyValuePair key="uid" value="1569588464067" description="" />
    <keyValuePair key="vivadoversion" value="2017.2" description="" />
   </section>
  </section>

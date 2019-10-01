@@ -60,9 +60,9 @@ int main (void)
 	}
 
 	// Load timer with delay in multiple of ONE_SECOND
-	XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
+	//XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
 	// Set AutoLoad mode
-	XScuTimer_EnableAutoReload(TimerInstancePtr);
+	//XScuTimer_EnableAutoReload(TimerInstancePtr);
 
    xil_printf("-- Start of the Program --\r\n");
  
@@ -160,7 +160,11 @@ void execute_command_3()
 
 	xil_printf("Calculating P \r\n");
 	//multiMatrixHard(aInst, bTInst, pInst);
+
 	multiMatrixSoft(aInst, bTInst,pInst);
+
+	xil_printf("Timer = %d", XScuTimer_GetCounterValue(TimerInstancePtr));
+
 	xil_printf("P = \r\n");
 	displayMatrix(pInst);
 	while(1)
