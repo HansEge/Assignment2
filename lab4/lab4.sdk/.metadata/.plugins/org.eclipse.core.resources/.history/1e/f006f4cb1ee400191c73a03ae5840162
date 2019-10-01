@@ -181,7 +181,7 @@ void execute_command_3()
 
 	//Display elapsed time of matrix multiplications
 	xil_printf("\r\n");
-	xil_printf("Multiplication times (clock cycles):\r\n");
+	xil_printf("Multiplication times:\r\n");
 	xil_printf("SW: %d\r\n",time_elapsed_SW);
 	xil_printf("HW: %d\r\n",time_elapsed_HW);
 
