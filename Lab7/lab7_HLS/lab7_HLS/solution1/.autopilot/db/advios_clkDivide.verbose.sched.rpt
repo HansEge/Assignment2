@@ -1,0 +1,226 @@
+
+
+================================================================
+== Vivado HLS Report for 'advios_clkDivide'
+================================================================
+* Date:           Thu Oct  3 19:01:38 2019
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        lab7_HLS
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.16|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    3|    3|    3|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    2|    2|         2|          -|          -|  inf |    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: StgValue_4 (10)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
+
+ST_1: StgValue_5 (11)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
+
+ST_1: StgValue_6 (12)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
+
+ST_1: StgValue_7 (13)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %inSwitch), !map !79
+
+ST_1: StgValue_8 (14)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !83
+
+ST_1: StgValue_9 (15)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
+
+ST_1: StgValue_10 (16)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
+
+ST_1: StgValue_11 (17)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
+
+ST_1: StgValue_12 (18)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
+
+ST_1: StgValue_13 (19)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:5
+:9  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
+
+ST_1: StgValue_14 (20)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:6
+:10  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
+
+ST_1: StgValue_15 (21)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:7
+:11  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
+
+ST_1: StgValue_16 (22)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:8
+:12  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
+
+ST_1: StgValue_17 (23)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:9
+:13  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
+
+ST_1: StgValue_18 (24)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:10
+:14  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [10 x i8]* @p_str8) nounwind
+
+ST_1: tmp (25)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:10
+:15  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9)
+
+ST_1: StgValue_20 (26)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:10
+:16  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind
+
+ST_1: p_ssdm_reset_v (27)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:10
+:17  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind
+
+ST_1: empty (28)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:20
+:18  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
+
+ST_1: empty_3 (29)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:20
+:19  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp)
+
+ST_1: StgValue_24 (30)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:20
+:20  br label %1
+
+
+ <State 2>: 6.16ns
+ST_2: advios_clkCount_read (32)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:9
+:0  %advios_clkCount_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %advios_clkCount)
+
+ST_2: advios_clkCount_assi (33)  [1/1] 2.90ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:9
+:1  %advios_clkCount_assi = add nsw i32 %advios_clkCount_read, 1
+
+ST_2: StgValue_27 (34)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:9
+:2  call void @_ssdm_op_Write.ap_auto.i32P(i32* %advios_clkCount, i32 %advios_clkCount_assi)
+
+ST_2: tmp_1 (35)  [1/1] 3.26ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:10
+:3  %tmp_1 = icmp sgt i32 %advios_clkCount_assi, 99999999
+
+ST_2: StgValue_29 (36)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:10
+:4  br i1 %tmp_1, label %2, label %3
+
+ST_2: StgValue_30 (38)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:17
+:0  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %oneSecPulse, i1 false)
+
+ST_2: StgValue_31 (39)  [1/1] 0.00ns
+:1  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_32 (41)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:12
+:0  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %oneSecPulse, i1 true)
+
+ST_3: StgValue_33 (42)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:13
+:1  call void @_ssdm_op_Write.ap_auto.i32P(i32* %advios_clkCount, i32 0)
+
+ST_3: StgValue_34 (43)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:14
+:2  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
+
+ST_3: StgValue_35 (45)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:19
+_ZN7_ap_sc_7sc_core4waitEi.exit:0  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_3: StgValue_36 (46)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:20
+_ZN7_ap_sc_7sc_core4waitEi.exit:1  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 6.16ns
+The critical path consists of the following:
+	wire read on port 'advios_clkCount' (../Assignment_lab7/Assignment_lab7/Advios.cpp:9) [32]  (0 ns)
+	'add' operation ('advios_clkCount_assi', ../Assignment_lab7/Assignment_lab7/Advios.cpp:9) [33]  (2.9 ns)
+	'icmp' operation ('tmp_1', ../Assignment_lab7/Assignment_lab7/Advios.cpp:10) [35]  (3.26 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
