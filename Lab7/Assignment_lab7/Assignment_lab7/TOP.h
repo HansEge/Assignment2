@@ -1,12 +1,14 @@
 #pragma once
 #include <systemc.h>
 #include "Advios.h"
+#include "advios_driver.h"
 
 
 SC_MODULE(TOP)
 {
 	// References to modules
-	Advios *advios;
+	advios *u_advios;
+	advios_driver *driver;
 
 
 	// Constructor
@@ -16,10 +18,9 @@ SC_MODULE(TOP)
 	sc_clock clock;
 
 	// Signals
-	sc_signal<bool> reset;
-	sc_signal<bool> clk_1;
-	sc_signal<sc_uint<NUM_BITS>> ctrl;
-	sc_signal<sc_uint<NUM_BITS>> inSwitch;
-	sc_signal<sc_uint<NUM_BITS>> outLeds;
+	sc_signal<bool> s_reset;
+	sc_signal<sc_uint<NUM_BITS>> s_ctrl;
+	sc_signal<sc_uint<NUM_BITS>> s_Switch;
+	sc_signal<sc_uint<NUM_BITS>> s_Leds;
 
 };

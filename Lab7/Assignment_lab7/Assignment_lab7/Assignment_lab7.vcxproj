@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Advios.h" />
+    <ClInclude Include="advios_driver.h" />
     <ClInclude Include="TOP.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Advios.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="advios_driver.cpp" />
+    <ClCompile Include="tb_advios.cpp" />
     <ClCompile Include="TOP.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

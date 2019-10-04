@@ -1,0 +1,21 @@
+[ 
+ { "reset" :  "0"  ,  "ctrl" :  "0000"  ,  "inSwitch" :  "0000" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+, { "reset" :  "0"  ,  "ctrl" :  "0111"  ,  "inSwitch" :  "1111" }
+] 

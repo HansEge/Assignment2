@@ -1,0 +1,6 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "advios.autotb.vhd"
+vhdl xil_defaultlib "advios.vhd"
+vhdl xil_defaultlib "advios_adviosThread.vhd"
+vhdl xil_defaultlib "advios_clkDivide.vhd"
+

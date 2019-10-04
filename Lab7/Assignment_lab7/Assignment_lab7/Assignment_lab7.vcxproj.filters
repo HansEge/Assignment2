@@ -21,6 +21,9 @@
     <ClInclude Include="TOP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="advios_driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Advios.cpp">
@@ -29,7 +32,10 @@
     <ClCompile Include="TOP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="advios_driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tb_advios.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

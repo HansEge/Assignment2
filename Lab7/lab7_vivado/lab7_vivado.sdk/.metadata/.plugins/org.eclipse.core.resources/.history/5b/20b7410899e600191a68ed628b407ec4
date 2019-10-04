@@ -1,0 +1,75 @@
+#include "xparameters.h"
+#include "xadvios.h" // Include HAL for iosc driver
+//====================================================
+
+// Define matrix size
+#define MSIZE 4
+
+// Define VectorArray to be an M by M- matrix, where M = MSIZE
+typedef union{
+	unsigned char comp[MSIZE];
+	unsigned int vect;
+} vectorType;
+
+typedef vectorType vectorArray[MSIZE];
+
+// Global variables, to make it possible to use in "command"-functions
+XGpio dip, push;
+int i, psb_check, dip_check;
+XScuTimer Timer; /* Cortex A9 SCU Private Timer Instance */
+
+vectorArray aInst, pInst, bTInst;
+
+#define ONE_SECOND 325000000 // half of the CPU clock speed
+
+// PS Timer related definitions
+XScuTimer_Config *ConfigPtr;
+XScuTimer *TimerInstancePtr = &Timer;
+
+
+// "Helper"-function prototypes
+void execute_command_1();
+void execute_command_2();
+void execute_command_3();
+void execute_command_4();
+void writeValueToLEDs(int val);
+
+
+// functions for exercise 4)
+void setInputMatrices();
+void displayMatrix(vectorArray);
+void displayMatrixRow(vectorArray, int);
+void multiMatrixSoft(vectorArray, vectorArray, vectorArray);
+
+// functions for exerciser 5)
+void multiMatrixHard(vectorArray, vectorArray, vectorArray);
+
+
+int main (void)
+{
+	XAdvios adviosHLS; // Create an instance of the advios driver
+
+	// Initialize the advios driver
+	if (XAdvios_Initialize(&adviosHLS, XPAR_ADVIOS_0_DEVICE_ID) != XST_SUCCESS) return XST_FAILURE;
+
+   xil_printf("-- Start of the Program --\r\n");
+
+   while(true)
+   {
+	   xil_printf("\r\n");
+	   xil_printf("-------------------------------\r\n");
+	   xil_printf("\r\n");
+	   xil_printf("Enter ctrl-value\r\n");
+
+	   int userInput = inbyte();
+
+
+   }
+}
+
+void writeToCtrl(int);
+void writeToCtrl(int val)
+{
+	// Writing 0xff to the ctrl register of the iosc IP core
+	 XIosc_SetCtrl(&adviosHLS, val);
+}
