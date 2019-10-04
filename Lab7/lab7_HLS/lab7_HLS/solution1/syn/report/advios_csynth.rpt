@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'advios'
 ================================================================
-* Date:           Thu Oct  3 19:01:39 2019
+* Date:           Fri Oct  4 12:50:53 2019
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        lab7_HLS
@@ -38,8 +38,8 @@
         |                                |                     |  Latency  |  Interval | Pipeline|
         |            Instance            |        Module       | min | max | min | max |   Type  |
         +--------------------------------+---------------------+-----+-----+-----+-----+---------+
-        |grp_advios_clkDivide_fu_90      |advios_clkDivide     |    3|    3|    3|    3|   none  |
-        |grp_advios_adviosThread_fu_112  |advios_adviosThread  |    4|    4|    4|    4|   none  |
+        |grp_advios_clkDivide_fu_100     |advios_clkDivide     |    3|    3|    3|    3|   none  |
+        |grp_advios_adviosThread_fu_122  |advios_adviosThread  |    4|    4|    4|    4|   none  |
         +--------------------------------+---------------------+-----+-----+-----+-----+---------+
 
         * Loop: 
@@ -74,8 +74,8 @@
     +--------------------------------+---------------------+---------+-------+-----+----+
     |            Instance            |        Module       | BRAM_18K| DSP48E|  FF | LUT|
     +--------------------------------+---------------------+---------+-------+-----+----+
-    |grp_advios_adviosThread_fu_112  |advios_adviosThread  |        0|      0|   28|  80|
-    |grp_advios_clkDivide_fu_90      |advios_clkDivide     |        0|      0|  105|  98|
+    |grp_advios_adviosThread_fu_122  |advios_adviosThread  |        0|      0|   28|  80|
+    |grp_advios_clkDivide_fu_100     |advios_clkDivide     |        0|      0|  105|  98|
     +--------------------------------+---------------------+---------+-------+-----+----+
     |Total                           |                     |        0|      0|  133| 178|
     +--------------------------------+---------------------+---------+-------+-----+----+

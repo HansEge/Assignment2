@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="advios" name="lab7_HLS" projectType="SystemC">
+<project xmlns="com.autoesl.autopilot.project" name="lab7_HLS" top="advios" projectType="SystemC">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

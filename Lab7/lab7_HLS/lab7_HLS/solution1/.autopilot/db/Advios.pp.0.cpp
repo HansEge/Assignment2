@@ -35388,7 +35388,6 @@ struct advios : ::sc_core::sc_module {
 };
 # 2 "../Assignment_lab7/Assignment_lab7/Advios.cpp" 2
 
-
 void advios::clkDivide()
 {
  while (1)
@@ -35410,6 +35409,9 @@ void advios::clkDivide()
 
 void advios::adviosThread()
 {
+
+#pragma HLS resource core=AXI4LiteS metadata="-bus_bundle slv0" variable=ctrl
+
  // Init counter
  sc_uint<4> cnt = 0;
 

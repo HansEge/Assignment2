@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'advios'
 ================================================================
-* Date:           Thu Oct  3 19:01:38 2019
+* Date:           Fri Oct  4 12:50:53 2019
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        lab7_HLS
@@ -77,110 +77,113 @@ IsGatedGlobalClock: 0
 
  <State 1>: 6.16ns
 ST_1: StgValue_3 (12)  [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
+:0  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
 
 ST_1: StgValue_4 (13)  [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
 
 ST_1: StgValue_5 (14)  [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
 
 ST_1: StgValue_6 (15)  [1/1] 0.00ns
-:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %inSwitch), !map !79
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
 
 ST_1: StgValue_7 (16)  [1/1] 0.00ns
-:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !83
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %inSwitch), !map !79
 
 ST_1: StgValue_8 (17)  [1/1] 0.00ns
-:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !83
 
 ST_1: StgValue_9 (18)  [1/1] 0.00ns
-:6  call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
 
 ST_1: StgValue_10 (19)  [1/1] 0.00ns
-:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
 
 ST_1: StgValue_11 (20)  [1/1] 0.00ns
-:8  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
 
-ST_1: StgValue_12 (21)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:29
-:9  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
+ST_1: StgValue_12 (21)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
 
-ST_1: advios_ssdm_threa (22)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
-:10  %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_adviosThread, align 1
+ST_1: StgValue_13 (22)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:29
+:10  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
 
-ST_1: StgValue_14 (23)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
-:11  br i1 %advios_ssdm_threa, label %1, label %2
+ST_1: advios_ssdm_threa (23)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+:11  %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_adviosThread, align 1
 
-ST_1: StgValue_15 (25)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+ST_1: StgValue_15 (24)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+:12  br i1 %advios_ssdm_threa, label %1, label %2
+
+ST_1: StgValue_16 (26)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
 :0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [13 x i8]* @p_str16) nounwind
 
-ST_1: StgValue_16 (26)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:31
+ST_1: StgValue_17 (27)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:31
 :1  call void (...)* @_ssdm_op_SpecSensitive([13 x i8]* @p_str16, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
-ST_1: advios_ssdm_threa_1 (27)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: advios_ssdm_threa_1 (28)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :2  %advios_ssdm_threa_1 = load i1* @advios_ssdm_thread_M_clkDivide, align 1
 
-ST_1: StgValue_18 (28)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: StgValue_19 (29)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :3  br i1 %advios_ssdm_threa_1, label %3, label %4
 
-ST_1: StgValue_19 (30)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: StgValue_20 (31)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [10 x i8]* @p_str8) nounwind
 
-ST_1: StgValue_20 (31)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:33
+ST_1: StgValue_21 (32)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:33
 :1  call void (...)* @_ssdm_op_SpecSensitive([10 x i8]* @p_str8, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
-ST_1: StgValue_21 (32)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:34
+ST_1: StgValue_22 (33)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:34
 :2  call void (...)* @_ssdm_op_SpecSensitive([10 x i8]* @p_str8, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
 
-ST_1: StgValue_22 (33)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:35
+ST_1: StgValue_23 (34)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:35
 :3  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
 
-ST_1: StgValue_23 (34)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:36
+ST_1: StgValue_24 (35)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:36
 :4  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
 
-ST_1: StgValue_24 (35)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:37
+ST_1: StgValue_25 (36)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:37
 :5  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
 
-ST_1: StgValue_25 (36)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:38
+ST_1: StgValue_26 (37)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:38
 :6  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
 
-ST_1: StgValue_26 (37)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:39
+ST_1: StgValue_27 (38)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:39
 :7  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
 
-ST_1: StgValue_27 (38)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:40
+ST_1: StgValue_28 (39)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:40
 :8  call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [12 x i8]* @p_str12, i32 1, i32 0, i1* %oneSecPulse) nounwind
 
-ST_1: StgValue_28 (39)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:41
+ST_1: StgValue_29 (40)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:41
 :9  call void @_ssdm_op_Write.ap_auto.i1P(i1* %advios_clk1s_state, i1 false)
 
-ST_1: StgValue_29 (40)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
+ST_1: StgValue_30 (41)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
 :10  call void @_ssdm_op_Write.ap_auto.i32P(i32* %advios_clkCount, i32 0)
 
-ST_1: StgValue_30 (41)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
+ST_1: StgValue_31 (42)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
 :11  ret void
 
-ST_1: StgValue_31 (43)  [2/2] 6.16ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: StgValue_32 (44)  [2/2] 6.16ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :0  call void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
-ST_1: StgValue_32 (46)  [2/2] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+ST_1: StgValue_33 (47)  [2/2] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
 :0  call void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
 
  <State 2>: 2.90ns
-ST_2: StgValue_33 (43)  [1/2] 2.90ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_2: StgValue_34 (44)  [1/2] 2.90ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :0  call void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
-ST_2: StgValue_34 (44)  [1/1] 0.00ns
+ST_2: StgValue_35 (45)  [1/1] 0.00ns
 :1  br label %UnifiedUnreachableBlock
 
-ST_2: StgValue_35 (46)  [1/2] 2.35ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+ST_2: StgValue_36 (47)  [1/2] 2.35ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
 :0  call void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
-ST_2: StgValue_36 (47)  [1/1] 0.00ns
+ST_2: StgValue_37 (48)  [1/1] 0.00ns
 :1  br label %UnifiedUnreachableBlock
 
-ST_2: StgValue_37 (49)  [1/1] 0.00ns
+ST_2: StgValue_38 (50)  [1/1] 0.00ns
 UnifiedUnreachableBlock:0  unreachable
 
 
@@ -192,11 +195,11 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
 
  <State 1>: 6.16ns
 The critical path consists of the following:
-	'call' operation (../Assignment_lab7/Assignment_lab7/Advios.h:32) to 'advios::clkDivide' [43]  (6.16 ns)
+	'call' operation (../Assignment_lab7/Assignment_lab7/Advios.h:32) to 'advios::clkDivide' [44]  (6.16 ns)
 
  <State 2>: 2.9ns
 The critical path consists of the following:
-	'call' operation (../Assignment_lab7/Assignment_lab7/Advios.h:32) to 'advios::clkDivide' [43]  (2.9 ns)
+	'call' operation (../Assignment_lab7/Assignment_lab7/Advios.h:32) to 'advios::clkDivide' [44]  (2.9 ns)
 
 
 ============================================================

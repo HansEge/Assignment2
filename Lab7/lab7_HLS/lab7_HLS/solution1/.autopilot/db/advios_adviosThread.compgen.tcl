@@ -7,20 +7,37 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-# Direct connection:
+# Adapter definition:
+set corename slv0
+set opts {
+    {
+        id 0
+        name ctrl
+        reset_level 1
+        sync_rst true
+        type scalar
+        dir I
+        width 4
+        mode SIG_IN_VLD_OFF:SIG_IN_ACC_OFF
+    }
+}
+set portmap { }
+set metadata { -bus_bundle slv0}
 if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 0 \
-    name ctrl \
-    type other \
-    dir I \
+if {[info proc ::AESL_LIB_XILADAPTER::axi_slave_int_gen] == "::AESL_LIB_XILADAPTER::axi_slave_int_gen"} {
+eval "::AESL_LIB_XILADAPTER::axi_slave_int_gen { \
+    corename ${corename} \
     reset_level 1 \
     sync_rst true \
-    corename dc_ctrl \
-    op interface \
-    ports { ctrl { I 4 vector } } \
-} "
+    opts {${opts}} \
+    portmap {${portmap}} \
+    metadata {${metadata}} \
+}"
+} else {
+puts "@W Can not find gen function '::AESL_LIB_XILADAPTER::axi_slave_int_gen' in the library. Ignored generation of adapter for '${corename}'"
 }
+}
+
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

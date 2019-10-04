@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'advios'
 ================================================================
-* Date:           Thu Oct  3 19:01:38 2019
+* Date:           Fri Oct  4 12:50:53 2019
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        lab7_HLS
@@ -38,8 +38,8 @@
         |                                |                     |  Latency  |  Interval | Pipeline|
         |            Instance            |        Module       | min | max | min | max |   Type  |
         +--------------------------------+---------------------+-----+-----+-----+-----+---------+
-        |grp_advios_clkDivide_fu_90      |advios_clkDivide     |    3|    3|    3|    3|   none  |
-        |grp_advios_adviosThread_fu_112  |advios_adviosThread  |    4|    4|    4|    4|   none  |
+        |grp_advios_clkDivide_fu_100     |advios_clkDivide     |    3|    3|    3|    3|   none  |
+        |grp_advios_adviosThread_fu_122  |advios_adviosThread  |    4|    4|    4|    4|   none  |
         +--------------------------------+---------------------+-----+-----+-----+-----+---------+
 
         * Loop: 
@@ -83,110 +83,113 @@ IsGatedGlobalClock: 0
 
  <State 1>: 6.16ns
 ST_1: StgValue_3 (12)  [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
+:0  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
 
 ST_1: StgValue_4 (13)  [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
 
 ST_1: StgValue_5 (14)  [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
 
 ST_1: StgValue_6 (15)  [1/1] 0.00ns
-:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %inSwitch), !map !79
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
 
 ST_1: StgValue_7 (16)  [1/1] 0.00ns
-:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !83
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %inSwitch), !map !79
 
 ST_1: StgValue_8 (17)  [1/1] 0.00ns
-:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !83
 
 ST_1: StgValue_9 (18)  [1/1] 0.00ns
-:6  call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
 
 ST_1: StgValue_10 (19)  [1/1] 0.00ns
-:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
 
 ST_1: StgValue_11 (20)  [1/1] 0.00ns
-:8  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
 
-ST_1: StgValue_12 (21)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:29
-:9  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
+ST_1: StgValue_12 (21)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
 
-ST_1: advios_ssdm_threa (22)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
-:10  %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_adviosThread, align 1
+ST_1: StgValue_13 (22)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:29
+:10  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
 
-ST_1: StgValue_14 (23)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
-:11  br i1 %advios_ssdm_threa, label %1, label %2
+ST_1: advios_ssdm_threa (23)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+:11  %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_adviosThread, align 1
 
-ST_1: StgValue_15 (25)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+ST_1: StgValue_15 (24)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+:12  br i1 %advios_ssdm_threa, label %1, label %2
+
+ST_1: StgValue_16 (26)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
 :0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [13 x i8]* @p_str16) nounwind
 
-ST_1: StgValue_16 (26)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:31
+ST_1: StgValue_17 (27)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:31
 :1  call void (...)* @_ssdm_op_SpecSensitive([13 x i8]* @p_str16, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
-ST_1: advios_ssdm_threa_1 (27)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: advios_ssdm_threa_1 (28)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :2  %advios_ssdm_threa_1 = load i1* @advios_ssdm_thread_M_clkDivide, align 1
 
-ST_1: StgValue_18 (28)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: StgValue_19 (29)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :3  br i1 %advios_ssdm_threa_1, label %3, label %4
 
-ST_1: StgValue_19 (30)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: StgValue_20 (31)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [10 x i8]* @p_str8) nounwind
 
-ST_1: StgValue_20 (31)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:33
+ST_1: StgValue_21 (32)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:33
 :1  call void (...)* @_ssdm_op_SpecSensitive([10 x i8]* @p_str8, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
-ST_1: StgValue_21 (32)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:34
+ST_1: StgValue_22 (33)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:34
 :2  call void (...)* @_ssdm_op_SpecSensitive([10 x i8]* @p_str8, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
 
-ST_1: StgValue_22 (33)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:35
+ST_1: StgValue_23 (34)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:35
 :3  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
 
-ST_1: StgValue_23 (34)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:36
+ST_1: StgValue_24 (35)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:36
 :4  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
 
-ST_1: StgValue_24 (35)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:37
+ST_1: StgValue_25 (36)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:37
 :5  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
 
-ST_1: StgValue_25 (36)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:38
+ST_1: StgValue_26 (37)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:38
 :6  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
 
-ST_1: StgValue_26 (37)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:39
+ST_1: StgValue_27 (38)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:39
 :7  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
 
-ST_1: StgValue_27 (38)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:40
+ST_1: StgValue_28 (39)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:40
 :8  call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [12 x i8]* @p_str12, i32 1, i32 0, i1* %oneSecPulse) nounwind
 
-ST_1: StgValue_28 (39)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:41
+ST_1: StgValue_29 (40)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:41
 :9  call void @_ssdm_op_Write.ap_auto.i1P(i1* %advios_clk1s_state, i1 false)
 
-ST_1: StgValue_29 (40)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
+ST_1: StgValue_30 (41)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
 :10  call void @_ssdm_op_Write.ap_auto.i32P(i32* %advios_clkCount, i32 0)
 
-ST_1: StgValue_30 (41)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
+ST_1: StgValue_31 (42)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:42
 :11  ret void
 
-ST_1: StgValue_31 (43)  [2/2] 6.16ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_1: StgValue_32 (44)  [2/2] 6.16ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :0  call void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
-ST_1: StgValue_32 (46)  [2/2] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+ST_1: StgValue_33 (47)  [2/2] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
 :0  call void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
 
  <State 2>: 2.90ns
-ST_2: StgValue_33 (43)  [1/2] 2.90ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
+ST_2: StgValue_34 (44)  [1/2] 2.90ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:32
 :0  call void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
-ST_2: StgValue_34 (44)  [1/1] 0.00ns
+ST_2: StgValue_35 (45)  [1/1] 0.00ns
 :1  br label %UnifiedUnreachableBlock
 
-ST_2: StgValue_35 (46)  [1/2] 2.35ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
+ST_2: StgValue_36 (47)  [1/2] 2.35ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.h:30
 :0  call void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
 
-ST_2: StgValue_36 (47)  [1/1] 0.00ns
+ST_2: StgValue_37 (48)  [1/1] 0.00ns
 :1  br label %UnifiedUnreachableBlock
 
-ST_2: StgValue_37 (49)  [1/1] 0.00ns
+ST_2: StgValue_38 (50)  [1/1] 0.00ns
 UnifiedUnreachableBlock:0  unreachable
 
 
@@ -219,7 +222,7 @@ Port [ advios_ssdm_thread_M_clkDivide]:  wired=0; compound=0; hidden=1; nouse=0;
 
 <LifeTime>
 <method=bitvector/>
-StgValue_3          (specbitsmap    ) [ 000]
+StgValue_3          (specifcore     ) [ 000]
 StgValue_4          (specbitsmap    ) [ 000]
 StgValue_5          (specbitsmap    ) [ 000]
 StgValue_6          (specbitsmap    ) [ 000]
@@ -228,30 +231,31 @@ StgValue_8          (specbitsmap    ) [ 000]
 StgValue_9          (specbitsmap    ) [ 000]
 StgValue_10         (specbitsmap    ) [ 000]
 StgValue_11         (specbitsmap    ) [ 000]
-StgValue_12         (spectopmodule  ) [ 000]
+StgValue_12         (specbitsmap    ) [ 000]
+StgValue_13         (spectopmodule  ) [ 000]
 advios_ssdm_threa   (load           ) [ 011]
-StgValue_14         (br             ) [ 000]
-StgValue_15         (specprocessdecl) [ 000]
-StgValue_16         (specsensitive  ) [ 000]
+StgValue_15         (br             ) [ 000]
+StgValue_16         (specprocessdecl) [ 000]
+StgValue_17         (specsensitive  ) [ 000]
 advios_ssdm_threa_1 (load           ) [ 010]
-StgValue_18         (br             ) [ 000]
-StgValue_19         (specprocessdecl) [ 000]
-StgValue_20         (specsensitive  ) [ 000]
+StgValue_19         (br             ) [ 000]
+StgValue_20         (specprocessdecl) [ 000]
 StgValue_21         (specsensitive  ) [ 000]
-StgValue_22         (specport       ) [ 000]
+StgValue_22         (specsensitive  ) [ 000]
 StgValue_23         (specport       ) [ 000]
 StgValue_24         (specport       ) [ 000]
 StgValue_25         (specport       ) [ 000]
 StgValue_26         (specport       ) [ 000]
-StgValue_27         (specchannel    ) [ 000]
-StgValue_28         (write          ) [ 000]
+StgValue_27         (specport       ) [ 000]
+StgValue_28         (specchannel    ) [ 000]
 StgValue_29         (write          ) [ 000]
-StgValue_30         (ret            ) [ 000]
-StgValue_33         (call           ) [ 000]
-StgValue_34         (br             ) [ 000]
-StgValue_35         (call           ) [ 000]
-StgValue_36         (br             ) [ 000]
-StgValue_37         (unreachable    ) [ 000]
+StgValue_30         (write          ) [ 000]
+StgValue_31         (ret            ) [ 000]
+StgValue_34         (call           ) [ 000]
+StgValue_35         (br             ) [ 000]
+StgValue_36         (call           ) [ 000]
+StgValue_37         (br             ) [ 000]
+StgValue_38         (unreachable    ) [ 000]
 </LifeTime>
 
 <model>
@@ -361,7 +365,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecIFCore"/></StgValue>
 </bind>
 </comp>
 
@@ -370,7 +374,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+<StgValue><ssdm name="p_str10"/></StgValue>
 </bind>
 </comp>
 
@@ -379,7 +383,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str"/></StgValue>
+<StgValue><ssdm name="p_str17"/></StgValue>
 </bind>
 </comp>
 
@@ -388,7 +392,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecProcessDecl"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -397,7 +401,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="p_str18"/></StgValue>
 </bind>
 </comp>
 
@@ -406,7 +410,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str16"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
 </bind>
 </comp>
 
@@ -415,7 +419,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecSensitive"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
 </bind>
 </comp>
 
@@ -424,7 +428,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2"/></StgValue>
+<StgValue><ssdm name="p_str"/></StgValue>
 </bind>
 </comp>
 
@@ -433,7 +437,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecProcessDecl"/></StgValue>
 </bind>
 </comp>
 
@@ -442,7 +446,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str8"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -451,7 +455,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str3"/></StgValue>
+<StgValue><ssdm name="p_str16"/></StgValue>
 </bind>
 </comp>
 
@@ -460,7 +464,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecSensitive"/></StgValue>
 </bind>
 </comp>
 
@@ -469,13 +473,13 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecPort"/></StgValue>
+<StgValue><ssdm name="p_str2"/></StgValue>
 </bind>
 </comp>
 
 <comp id="48" class="1001" name="const_48">
 <pin_list>
-<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name=""/></StgValue>
@@ -487,7 +491,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str1"/></StgValue>
+<StgValue><ssdm name="p_str8"/></StgValue>
 </bind>
 </comp>
 
@@ -496,7 +500,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str4"/></StgValue>
+<StgValue><ssdm name="p_str3"/></StgValue>
 </bind>
 </comp>
 
@@ -505,7 +509,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str5"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -514,16 +518,16 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str6"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecPort"/></StgValue>
 </bind>
 </comp>
 
 <comp id="58" class="1001" name="const_58">
 <pin_list>
-<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str7"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -532,7 +536,7 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -541,74 +545,106 @@ StgValue_37         (unreachable    ) [ 000]
 <pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str12"/></StgValue>
+<StgValue><ssdm name="p_str4"/></StgValue>
 </bind>
 </comp>
 
 <comp id="64" class="1001" name="const_64">
 <pin_list>
-<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str7"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str12"/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1001" name="const_74">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="_ssdm_op_Write.ap_auto.i1P"/></StgValue>
 </bind>
 </comp>
 
-<comp id="66" class="1001" name="const_66">
+<comp id="76" class="1001" name="const_76">
 <pin_list>
-<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
-<comp id="68" class="1001" name="const_68">
+<comp id="78" class="1001" name="const_78">
 <pin_list>
-<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="_ssdm_op_Write.ap_auto.i32P"/></StgValue>
 </bind>
 </comp>
 
-<comp id="70" class="1001" name="const_70">
+<comp id="80" class="1001" name="const_80">
 <pin_list>
-<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="advios::clkDivide"/></StgValue>
 </bind>
 </comp>
 
-<comp id="72" class="1001" name="const_72">
+<comp id="82" class="1001" name="const_82">
 <pin_list>
-<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+<pin id="83" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="advios::adviosThread"/></StgValue>
 </bind>
 </comp>
 
-<comp id="74" class="1004" name="StgValue_28_write_fu_74">
+<comp id="84" class="1004" name="StgValue_29_write_fu_84">
 <pin_list>
-<pin id="75" dir="0" index="0" bw="0" slack="0"/>
-<pin id="76" dir="0" index="1" bw="1" slack="0"/>
-<pin id="77" dir="0" index="2" bw="1" slack="0"/>
-<pin id="78" dir="1" index="3" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="write(1151) " fcode="write"/>
-<opset="StgValue_28/1 "/>
-</bind>
-</comp>
-
-<comp id="82" class="1004" name="StgValue_29_write_fu_82">
-<pin_list>
-<pin id="83" dir="0" index="0" bw="0" slack="0"/>
-<pin id="84" dir="0" index="1" bw="32" slack="0"/>
-<pin id="85" dir="0" index="2" bw="1" slack="0"/>
-<pin id="86" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="85" dir="0" index="0" bw="0" slack="0"/>
+<pin id="86" dir="0" index="1" bw="1" slack="0"/>
+<pin id="87" dir="0" index="2" bw="1" slack="0"/>
+<pin id="88" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
@@ -616,39 +652,32 @@ StgValue_37         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="90" class="1004" name="grp_advios_clkDivide_fu_90">
+<comp id="92" class="1004" name="StgValue_30_write_fu_92">
 <pin_list>
-<pin id="91" dir="0" index="0" bw="0" slack="0"/>
-<pin id="92" dir="0" index="1" bw="1" slack="0"/>
-<pin id="93" dir="0" index="2" bw="1" slack="0"/>
-<pin id="94" dir="0" index="3" bw="4" slack="0"/>
-<pin id="95" dir="0" index="4" bw="4" slack="0"/>
-<pin id="96" dir="0" index="5" bw="4" slack="0"/>
-<pin id="97" dir="0" index="6" bw="1" slack="0"/>
-<pin id="98" dir="0" index="7" bw="8" slack="0"/>
-<pin id="99" dir="0" index="8" bw="32" slack="0"/>
-<pin id="100" dir="0" index="9" bw="1" slack="0"/>
-<pin id="101" dir="1" index="10" bw="0" slack="2147483647"/>
+<pin id="93" dir="0" index="0" bw="0" slack="0"/>
+<pin id="94" dir="0" index="1" bw="32" slack="0"/>
+<pin id="95" dir="0" index="2" bw="1" slack="0"/>
+<pin id="96" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
-<opcode="call(48) " fcode="call"/>
-<opset="StgValue_31/1 "/>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_30/1 "/>
 </bind>
 </comp>
 
-<comp id="112" class="1004" name="grp_advios_adviosThread_fu_112">
+<comp id="100" class="1004" name="grp_advios_clkDivide_fu_100">
 <pin_list>
-<pin id="113" dir="0" index="0" bw="0" slack="0"/>
-<pin id="114" dir="0" index="1" bw="1" slack="0"/>
-<pin id="115" dir="0" index="2" bw="1" slack="0"/>
-<pin id="116" dir="0" index="3" bw="4" slack="0"/>
-<pin id="117" dir="0" index="4" bw="4" slack="0"/>
-<pin id="118" dir="0" index="5" bw="4" slack="0"/>
-<pin id="119" dir="0" index="6" bw="1" slack="0"/>
-<pin id="120" dir="0" index="7" bw="8" slack="0"/>
-<pin id="121" dir="0" index="8" bw="32" slack="0"/>
-<pin id="122" dir="0" index="9" bw="1" slack="0"/>
-<pin id="123" dir="1" index="10" bw="0" slack="2147483647"/>
+<pin id="101" dir="0" index="0" bw="0" slack="0"/>
+<pin id="102" dir="0" index="1" bw="1" slack="0"/>
+<pin id="103" dir="0" index="2" bw="1" slack="0"/>
+<pin id="104" dir="0" index="3" bw="4" slack="0"/>
+<pin id="105" dir="0" index="4" bw="4" slack="0"/>
+<pin id="106" dir="0" index="5" bw="4" slack="0"/>
+<pin id="107" dir="0" index="6" bw="1" slack="0"/>
+<pin id="108" dir="0" index="7" bw="8" slack="0"/>
+<pin id="109" dir="0" index="8" bw="32" slack="0"/>
+<pin id="110" dir="0" index="9" bw="1" slack="0"/>
+<pin id="111" dir="1" index="10" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
@@ -656,10 +685,30 @@ StgValue_37         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="134" class="1004" name="advios_ssdm_threa_load_fu_134">
+<comp id="122" class="1004" name="grp_advios_adviosThread_fu_122">
 <pin_list>
-<pin id="135" dir="0" index="0" bw="1" slack="0"/>
-<pin id="136" dir="1" index="1" bw="1" slack="1"/>
+<pin id="123" dir="0" index="0" bw="0" slack="0"/>
+<pin id="124" dir="0" index="1" bw="1" slack="0"/>
+<pin id="125" dir="0" index="2" bw="1" slack="0"/>
+<pin id="126" dir="0" index="3" bw="4" slack="0"/>
+<pin id="127" dir="0" index="4" bw="4" slack="0"/>
+<pin id="128" dir="0" index="5" bw="4" slack="0"/>
+<pin id="129" dir="0" index="6" bw="1" slack="0"/>
+<pin id="130" dir="0" index="7" bw="8" slack="0"/>
+<pin id="131" dir="0" index="8" bw="32" slack="0"/>
+<pin id="132" dir="0" index="9" bw="1" slack="0"/>
+<pin id="133" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_33/1 "/>
+</bind>
+</comp>
+
+<comp id="144" class="1004" name="advios_ssdm_threa_load_fu_144">
+<pin_list>
+<pin id="145" dir="0" index="0" bw="1" slack="0"/>
+<pin id="146" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -667,10 +716,10 @@ StgValue_37         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="138" class="1004" name="advios_ssdm_threa_1_load_fu_138">
+<comp id="148" class="1004" name="advios_ssdm_threa_1_load_fu_148">
 <pin_list>
-<pin id="139" dir="0" index="0" bw="1" slack="0"/>
-<pin id="140" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="149" dir="0" index="0" bw="1" slack="0"/>
+<pin id="150" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -678,10 +727,10 @@ StgValue_37         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="142" class="1005" name="advios_ssdm_threa_reg_142">
+<comp id="152" class="1005" name="advios_ssdm_threa_reg_152">
 <pin_list>
-<pin id="143" dir="0" index="0" bw="1" slack="1"/>
-<pin id="144" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="153" dir="0" index="0" bw="1" slack="1"/>
+<pin id="154" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="advios_ssdm_threa "/>
@@ -691,63 +740,63 @@ StgValue_37         (unreachable    ) [ 000]
 </comp_list>
 
 <net_list>
-<net id="79"><net_src comp="64" pin="0"/><net_sink comp="74" pin=0"/></net>
+<net id="89"><net_src comp="74" pin="0"/><net_sink comp="84" pin=0"/></net>
 
-<net id="80"><net_src comp="16" pin="0"/><net_sink comp="74" pin=1"/></net>
+<net id="90"><net_src comp="16" pin="0"/><net_sink comp="84" pin=1"/></net>
 
-<net id="81"><net_src comp="66" pin="0"/><net_sink comp="74" pin=2"/></net>
+<net id="91"><net_src comp="76" pin="0"/><net_sink comp="84" pin=2"/></net>
 
-<net id="87"><net_src comp="68" pin="0"/><net_sink comp="82" pin=0"/></net>
+<net id="97"><net_src comp="78" pin="0"/><net_sink comp="92" pin=0"/></net>
 
-<net id="88"><net_src comp="14" pin="0"/><net_sink comp="82" pin=1"/></net>
+<net id="98"><net_src comp="14" pin="0"/><net_sink comp="92" pin=1"/></net>
 
-<net id="89"><net_src comp="48" pin="0"/><net_sink comp="82" pin=2"/></net>
+<net id="99"><net_src comp="58" pin="0"/><net_sink comp="92" pin=2"/></net>
 
-<net id="102"><net_src comp="70" pin="0"/><net_sink comp="90" pin=0"/></net>
+<net id="112"><net_src comp="80" pin="0"/><net_sink comp="100" pin=0"/></net>
 
-<net id="103"><net_src comp="0" pin="0"/><net_sink comp="90" pin=1"/></net>
+<net id="113"><net_src comp="0" pin="0"/><net_sink comp="100" pin=1"/></net>
 
-<net id="104"><net_src comp="2" pin="0"/><net_sink comp="90" pin=2"/></net>
+<net id="114"><net_src comp="2" pin="0"/><net_sink comp="100" pin=2"/></net>
 
-<net id="105"><net_src comp="4" pin="0"/><net_sink comp="90" pin=3"/></net>
+<net id="115"><net_src comp="4" pin="0"/><net_sink comp="100" pin=3"/></net>
 
-<net id="106"><net_src comp="6" pin="0"/><net_sink comp="90" pin=4"/></net>
+<net id="116"><net_src comp="6" pin="0"/><net_sink comp="100" pin=4"/></net>
 
-<net id="107"><net_src comp="8" pin="0"/><net_sink comp="90" pin=5"/></net>
+<net id="117"><net_src comp="8" pin="0"/><net_sink comp="100" pin=5"/></net>
 
-<net id="108"><net_src comp="10" pin="0"/><net_sink comp="90" pin=6"/></net>
+<net id="118"><net_src comp="10" pin="0"/><net_sink comp="100" pin=6"/></net>
 
-<net id="109"><net_src comp="12" pin="0"/><net_sink comp="90" pin=7"/></net>
+<net id="119"><net_src comp="12" pin="0"/><net_sink comp="100" pin=7"/></net>
 
-<net id="110"><net_src comp="14" pin="0"/><net_sink comp="90" pin=8"/></net>
+<net id="120"><net_src comp="14" pin="0"/><net_sink comp="100" pin=8"/></net>
 
-<net id="111"><net_src comp="16" pin="0"/><net_sink comp="90" pin=9"/></net>
+<net id="121"><net_src comp="16" pin="0"/><net_sink comp="100" pin=9"/></net>
 
-<net id="124"><net_src comp="72" pin="0"/><net_sink comp="112" pin=0"/></net>
+<net id="134"><net_src comp="82" pin="0"/><net_sink comp="122" pin=0"/></net>
 
-<net id="125"><net_src comp="0" pin="0"/><net_sink comp="112" pin=1"/></net>
+<net id="135"><net_src comp="0" pin="0"/><net_sink comp="122" pin=1"/></net>
 
-<net id="126"><net_src comp="2" pin="0"/><net_sink comp="112" pin=2"/></net>
+<net id="136"><net_src comp="2" pin="0"/><net_sink comp="122" pin=2"/></net>
 
-<net id="127"><net_src comp="4" pin="0"/><net_sink comp="112" pin=3"/></net>
+<net id="137"><net_src comp="4" pin="0"/><net_sink comp="122" pin=3"/></net>
 
-<net id="128"><net_src comp="6" pin="0"/><net_sink comp="112" pin=4"/></net>
+<net id="138"><net_src comp="6" pin="0"/><net_sink comp="122" pin=4"/></net>
 
-<net id="129"><net_src comp="8" pin="0"/><net_sink comp="112" pin=5"/></net>
+<net id="139"><net_src comp="8" pin="0"/><net_sink comp="122" pin=5"/></net>
 
-<net id="130"><net_src comp="10" pin="0"/><net_sink comp="112" pin=6"/></net>
+<net id="140"><net_src comp="10" pin="0"/><net_sink comp="122" pin=6"/></net>
 
-<net id="131"><net_src comp="12" pin="0"/><net_sink comp="112" pin=7"/></net>
+<net id="141"><net_src comp="12" pin="0"/><net_sink comp="122" pin=7"/></net>
 
-<net id="132"><net_src comp="14" pin="0"/><net_sink comp="112" pin=8"/></net>
+<net id="142"><net_src comp="14" pin="0"/><net_sink comp="122" pin=8"/></net>
 
-<net id="133"><net_src comp="16" pin="0"/><net_sink comp="112" pin=9"/></net>
+<net id="143"><net_src comp="16" pin="0"/><net_sink comp="122" pin=9"/></net>
 
-<net id="137"><net_src comp="18" pin="0"/><net_sink comp="134" pin=0"/></net>
+<net id="147"><net_src comp="18" pin="0"/><net_sink comp="144" pin=0"/></net>
 
-<net id="141"><net_src comp="20" pin="0"/><net_sink comp="138" pin=0"/></net>
+<net id="151"><net_src comp="20" pin="0"/><net_sink comp="148" pin=0"/></net>
 
-<net id="145"><net_src comp="134" pin="1"/><net_sink comp="142" pin=0"/></net>
+<net id="155"><net_src comp="144" pin="1"/><net_sink comp="152" pin=0"/></net>
 
 </net_list>
 
@@ -769,8 +818,8 @@ StgValue_37         (unreachable    ) [ 000]
 	Port: advios::advios : advios_ssdm_thread_M_clkDivide | {1 }
   - Chain level:
 	State 1
-		StgValue_14 : 1
-		StgValue_18 : 1
+		StgValue_15 : 1
+		StgValue_19 : 1
 	State 2
 
 
@@ -782,11 +831,11 @@ StgValue_37         (unreachable    ) [ 000]
 |----------|--------------------------------|---------|---------|---------|
 | Operation|         Functional Unit        |  Delay  |    FF   |   LUT   |
 |----------|--------------------------------|---------|---------|---------|
-|   call   |   grp_advios_clkDivide_fu_90   |  3.176  |   102   |    62   |
-|          | grp_advios_adviosThread_fu_112 |  1.958  |    24   |    38   |
+|   call   |   grp_advios_clkDivide_fu_100  |  3.176  |   102   |    62   |
+|          | grp_advios_adviosThread_fu_122 |  1.958  |    24   |    38   |
 |----------|--------------------------------|---------|---------|---------|
-|   write  |     StgValue_28_write_fu_74    |    0    |    0    |    0    |
-|          |     StgValue_29_write_fu_82    |    0    |    0    |    0    |
+|   write  |     StgValue_29_write_fu_84    |    0    |    0    |    0    |
+|          |     StgValue_30_write_fu_92    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|
 |   Total  |                                |  5.134  |   126   |   100   |
 |----------|--------------------------------|---------|---------|---------|
@@ -798,7 +847,7 @@ N/A
 +-------------------------+--------+
 |                         |   FF   |
 +-------------------------+--------+
-|advios_ssdm_threa_reg_142|    1   |
+|advios_ssdm_threa_reg_152|    1   |
 +-------------------------+--------+
 |          Total          |    1   |
 +-------------------------+--------+

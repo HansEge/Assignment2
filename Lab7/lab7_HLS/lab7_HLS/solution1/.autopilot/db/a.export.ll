@@ -23,6 +23,8 @@ target triple = "i686-pc-mingw32"
 @p_str4 = private unnamed_addr constant [13 x i8] c"\22sc_uint<4>\22\00", align 1
 @p_str3 = private unnamed_addr constant [6 x i8] c"reset\00", align 1
 @p_str2 = private unnamed_addr constant [4 x i8] c"clk\00", align 1
+@p_str18 = private unnamed_addr constant [17 x i8] c"-bus_bundle slv0\00", align 1
+@p_str17 = private unnamed_addr constant [10 x i8] c"AXI4LiteS\00", align 1
 @p_str16 = private unnamed_addr constant [13 x i8] c"adviosThread\00", align 1
 @p_str12 = private unnamed_addr constant [12 x i8] c"oneSecPulse\00", align 1
 @p_str10 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
@@ -34,6 +36,7 @@ declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 define void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state) {
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
   call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
@@ -97,6 +100,7 @@ define void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwit
   %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9)
   call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind
   %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
   %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
   %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp_3)
   store i4 0, i4* %v_V
@@ -141,6 +145,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:                  ; preds = %6, %5, %4, %3
 }
 
 define weak void @"advios::advios"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state) {
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
   call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
@@ -261,6 +266,11 @@ entry:
 }
 
 define weak void @_ssdm_op_SpecPort(...) nounwind {
+entry:
+  ret void
+}
+
+define weak void @_ssdm_op_SpecIFCore(...) {
 entry:
   ret void
 }

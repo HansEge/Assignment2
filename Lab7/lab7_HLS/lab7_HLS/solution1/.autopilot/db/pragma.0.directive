@@ -5,5 +5,12 @@
 <option name="complete" positionalBoolean="type" value=""/>
 </pragma>
 </directive>
+<directive functionLabel="" functionName="advios::adviosThread" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="ctrl"/>
+<option name="core" value="AXI4LiteS"/>
+<option name="metadata" value="&quot;-bus_bundle slv0&quot;"/>
+</pragma>
+</directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

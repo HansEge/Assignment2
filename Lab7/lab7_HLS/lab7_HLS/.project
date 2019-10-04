@@ -37,16 +37,6 @@
 			<location>C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_HLS/lab7_HLS/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/Advios.h</name>
-			<type>1</type>
-			<location>C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/Assignment_lab7/Assignment_lab7/Advios.h</location>
-		</link>
-		<link>
-			<name>.reference/advios_driver.h</name>
-			<type>1</type>
-			<location>C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/Assignment_lab7/Assignment_lab7/advios_driver.h</location>
-		</link>
-		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_HLS/lab7_HLS/solution1/.tcls</location>

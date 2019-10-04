@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../Assignment_lab7/Assignment_lab7/tb_advios.cpp ../../../../../Assignment_lab7/Assignment_lab7/Advios.cpp ../../../../../Assignment_lab7/Assignment_lab7/advios_driver.cpp
+HLS_SOURCES = ../../../../../Assignment_lab7/Assignment_lab7/advios_driver.cpp ../../../../../Assignment_lab7/Assignment_lab7/tb_advios.cpp ../../../../../Assignment_lab7/Assignment_lab7/Advios.cpp
 
 TARGET := csim.exe
 
@@ -55,6 +55,7 @@ IFLAG += -D__SIM_FIR__
 
 IFLAG += -D__SIM_DDS__
 
+LFLAG += -L$(AUTOPILOT_TOOL)/systemc/lib -lsystemc_debug
 IFLAG += -g
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
@@ -69,6 +70,12 @@ all: $(TARGET)
 
 
 
+$(ObjDir)/advios_driver.o: ../../../../../Assignment_lab7/Assignment_lab7/advios_driver.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../Assignment_lab7/Assignment_lab7/advios_driver.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/advios_driver.d
+
 $(ObjDir)/tb_advios.o: ../../../../../Assignment_lab7/Assignment_lab7/tb_advios.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../../Assignment_lab7/Assignment_lab7/tb_advios.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD -DHW_COSIM  $(IFLAG) $(DFLAG) $< -o $@ ; \
@@ -80,9 +87,3 @@ $(ObjDir)/Advios.o: ../../../../../Assignment_lab7/Assignment_lab7/Advios.cpp $(
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/Advios.d
-
-$(ObjDir)/advios_driver.o: ../../../../../Assignment_lab7/Assignment_lab7/advios_driver.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../Assignment_lab7/Assignment_lab7/advios_driver.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/advios_driver.d

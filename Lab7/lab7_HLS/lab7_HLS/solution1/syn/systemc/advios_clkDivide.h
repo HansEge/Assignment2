@@ -33,11 +33,11 @@ struct advios_clkDivide : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    sc_signal< sc_lv<1> > tmp_1_fu_106_p2;
-    sc_signal< sc_lv<1> > tmp_1_reg_112;
+    sc_signal< sc_lv<1> > tmp_1_fu_114_p2;
+    sc_signal< sc_lv<1> > tmp_1_reg_120;
     sc_signal< sc_lv<3> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state2;
-    sc_signal< sc_lv<32> > advios_clkCount_assi_fu_99_p2;
+    sc_signal< sc_lv<32> > advios_clkCount_assi_fu_107_p2;
     sc_signal< sc_logic > ap_CS_fsm_state3;
     sc_signal< sc_lv<3> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
@@ -53,14 +53,14 @@ struct advios_clkDivide : public sc_module {
     static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();
-    void thread_advios_clkCount_assi_fu_99_p2();
+    void thread_advios_clkCount_assi_fu_107_p2();
     void thread_advios_clkCount_o();
     void thread_advios_clkCount_o_ap_vld();
     void thread_ap_CS_fsm_state2();
     void thread_ap_CS_fsm_state3();
     void thread_oneSecPulse();
     void thread_oneSecPulse_ap_vld();
-    void thread_tmp_1_fu_106_p2();
+    void thread_tmp_1_fu_114_p2();
     void thread_ap_NS_fsm();
 };
 

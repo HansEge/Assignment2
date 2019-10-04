@@ -82,7 +82,7 @@
 						</inlineStackInfo>
 						<originalName>advios.ctrl.m_if.Val.V</originalName>
 						<rtlName></rtlName>
-						<coreName></coreName>
+						<coreName>AXI4LiteS</coreName>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -158,7 +158,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>22</id>
+						<id>23</id>
 						<name>advios_ssdm_threa</name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -191,7 +191,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>51</item>
+					<item>52</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -200,7 +200,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>23</id>
+						<id>24</id>
 						<name></name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -233,9 +233,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>52</item>
 					<item>53</item>
 					<item>54</item>
+					<item>55</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -244,7 +244,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>27</id>
+						<id>28</id>
 						<name>advios_ssdm_threa_1</name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -277,7 +277,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>67</item>
+					<item>68</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -286,7 +286,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>28</id>
+						<id>29</id>
 						<name></name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -319,9 +319,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>68</item>
 					<item>69</item>
 					<item>70</item>
+					<item>71</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -330,7 +330,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>39</id>
+						<id>40</id>
 						<name></name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -363,9 +363,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>84</item>
 					<item>85</item>
-					<item>87</item>
+					<item>86</item>
+					<item>88</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -374,7 +374,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>40</id>
+						<id>41</id>
 						<name></name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -407,9 +407,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>89</item>
 					<item>90</item>
-					<item>92</item>
+					<item>91</item>
+					<item>93</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -418,7 +418,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>41</id>
+						<id>42</id>
 						<name></name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -459,7 +459,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>43</id>
+						<id>44</id>
 						<name></name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -492,7 +492,6 @@
 				<oprand_edges>
 					<count>10</count>
 					<item_version>0</item_version>
-					<item>72</item>
 					<item>73</item>
 					<item>74</item>
 					<item>75</item>
@@ -502,6 +501,7 @@
 					<item>79</item>
 					<item>80</item>
 					<item>81</item>
+					<item>82</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -510,7 +510,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>44</id>
+						<id>45</id>
 						<name></name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -529,7 +529,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>82</item>
+					<item>83</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -538,7 +538,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>46</id>
+						<id>47</id>
 						<name></name>
 						<fileName>../Assignment_lab7/Assignment_lab7/Advios.h</fileName>
 						<fileDirectory>C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\lab7_HLS</fileDirectory>
@@ -571,7 +571,6 @@
 				<oprand_edges>
 					<count>10</count>
 					<item_version>0</item_version>
-					<item>56</item>
 					<item>57</item>
 					<item>58</item>
 					<item>59</item>
@@ -581,6 +580,7 @@
 					<item>63</item>
 					<item>64</item>
 					<item>65</item>
+					<item>66</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -589,7 +589,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>47</id>
+						<id>48</id>
 						<name></name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -608,7 +608,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>66</item>
+					<item>67</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -617,7 +617,7 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>49</id>
+						<id>50</id>
 						<name></name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -648,7 +648,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>55</id>
+						<id>56</id>
 						<name>advios_adviosThread</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -671,7 +671,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>71</id>
+						<id>72</id>
 						<name>advios_clkDivide</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -694,7 +694,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>86</id>
+						<id>87</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -717,7 +717,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>91</id>
+						<id>92</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -743,7 +743,7 @@
 			<item class_id="18" tracking_level="1" version="0" object_id="_22">
 				<Obj>
 					<type>3</type>
-					<id>24</id>
+					<id>25</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -760,14 +760,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>22</item>
 					<item>23</item>
+					<item>24</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_23">
 				<Obj>
 					<type>3</type>
-					<id>29</id>
+					<id>30</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -784,14 +784,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>27</item>
 					<item>28</item>
+					<item>29</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_24">
 				<Obj>
 					<type>3</type>
-					<id>42</id>
+					<id>43</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -808,15 +808,15 @@
 				<node_objs>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>39</item>
 					<item>40</item>
 					<item>41</item>
+					<item>42</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_25">
 				<Obj>
 					<type>3</type>
-					<id>45</id>
+					<id>46</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -833,14 +833,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>43</item>
 					<item>44</item>
+					<item>45</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_26">
 				<Obj>
 					<type>3</type>
-					<id>48</id>
+					<id>49</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -857,14 +857,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>46</item>
 					<item>47</item>
+					<item>48</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_27">
 				<Obj>
 					<type>3</type>
-					<id>50</id>
+					<id>51</id>
 					<name>UnifiedUnreachableBlock</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -881,7 +881,7 @@
 				<node_objs>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>49</item>
+					<item>50</item>
 				</node_objs>
 			</item>
 		</blocks>
@@ -889,244 +889,244 @@
 			<count>40</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_28">
-				<id>51</id>
-				<edge_type>1</edge_type>
-				<source_obj>10</source_obj>
-				<sink_obj>22</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_29">
 				<id>52</id>
 				<edge_type>1</edge_type>
-				<source_obj>22</source_obj>
+				<source_obj>10</source_obj>
 				<sink_obj>23</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_29">
+				<id>53</id>
+				<edge_type>1</edge_type>
+				<source_obj>23</source_obj>
+				<sink_obj>24</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_30">
-				<id>53</id>
-				<edge_type>2</edge_type>
-				<source_obj>29</source_obj>
-				<sink_obj>23</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_31">
 				<id>54</id>
 				<edge_type>2</edge_type>
-				<source_obj>48</source_obj>
-				<sink_obj>23</sink_obj>
+				<source_obj>30</source_obj>
+				<sink_obj>24</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_31">
+				<id>55</id>
+				<edge_type>2</edge_type>
+				<source_obj>49</source_obj>
+				<sink_obj>24</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_32">
-				<id>56</id>
-				<edge_type>1</edge_type>
-				<source_obj>55</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_33">
 				<id>57</id>
 				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_34">
-				<id>58</id>
-				<edge_type>1</edge_type>
-				<source_obj>2</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_35">
-				<id>59</id>
-				<edge_type>1</edge_type>
-				<source_obj>3</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_36">
-				<id>60</id>
-				<edge_type>1</edge_type>
-				<source_obj>4</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_37">
-				<id>61</id>
-				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_38">
-				<id>62</id>
-				<edge_type>1</edge_type>
-				<source_obj>6</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_39">
-				<id>63</id>
-				<edge_type>1</edge_type>
-				<source_obj>7</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_40">
-				<id>64</id>
-				<edge_type>1</edge_type>
-				<source_obj>8</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_41">
-				<id>65</id>
-				<edge_type>1</edge_type>
-				<source_obj>9</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_42">
-				<id>66</id>
-				<edge_type>2</edge_type>
-				<source_obj>50</source_obj>
+				<source_obj>56</source_obj>
 				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_43">
-				<id>67</id>
-				<edge_type>1</edge_type>
-				<source_obj>11</source_obj>
-				<sink_obj>27</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_44">
-				<id>68</id>
-				<edge_type>1</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_45">
-				<id>69</id>
-				<edge_type>2</edge_type>
-				<source_obj>42</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_46">
-				<id>70</id>
-				<edge_type>2</edge_type>
-				<source_obj>45</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_47">
-				<id>72</id>
-				<edge_type>1</edge_type>
-				<source_obj>71</source_obj>
-				<sink_obj>43</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_48">
-				<id>73</id>
+			<item class_id_reference="20" object_id="_33">
+				<id>58</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_49">
-				<id>74</id>
+			<item class_id_reference="20" object_id="_34">
+				<id>59</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_50">
-				<id>75</id>
+			<item class_id_reference="20" object_id="_35">
+				<id>60</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_51">
-				<id>76</id>
+			<item class_id_reference="20" object_id="_36">
+				<id>61</id>
 				<edge_type>1</edge_type>
 				<source_obj>4</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_52">
-				<id>77</id>
+			<item class_id_reference="20" object_id="_37">
+				<id>62</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_53">
-				<id>78</id>
+			<item class_id_reference="20" object_id="_38">
+				<id>63</id>
 				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_54">
-				<id>79</id>
+			<item class_id_reference="20" object_id="_39">
+				<id>64</id>
 				<edge_type>1</edge_type>
 				<source_obj>7</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_55">
-				<id>80</id>
+			<item class_id_reference="20" object_id="_40">
+				<id>65</id>
 				<edge_type>1</edge_type>
 				<source_obj>8</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_56">
-				<id>81</id>
+			<item class_id_reference="20" object_id="_41">
+				<id>66</id>
 				<edge_type>1</edge_type>
 				<source_obj>9</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_57">
-				<id>82</id>
+			<item class_id_reference="20" object_id="_42">
+				<id>67</id>
 				<edge_type>2</edge_type>
-				<source_obj>50</source_obj>
-				<sink_obj>44</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_58">
-				<id>85</id>
-				<edge_type>1</edge_type>
-				<source_obj>9</source_obj>
-				<sink_obj>39</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_59">
-				<id>87</id>
-				<edge_type>1</edge_type>
-				<source_obj>86</source_obj>
-				<sink_obj>39</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_60">
-				<id>90</id>
-				<edge_type>1</edge_type>
-				<source_obj>8</source_obj>
-				<sink_obj>40</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_61">
-				<id>92</id>
-				<edge_type>1</edge_type>
-				<source_obj>91</source_obj>
-				<sink_obj>40</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_62">
-				<id>205</id>
-				<edge_type>2</edge_type>
-				<source_obj>24</source_obj>
+				<source_obj>51</source_obj>
 				<sink_obj>48</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_63">
-				<id>206</id>
-				<edge_type>2</edge_type>
-				<source_obj>24</source_obj>
+			<item class_id_reference="20" object_id="_43">
+				<id>68</id>
+				<edge_type>1</edge_type>
+				<source_obj>11</source_obj>
+				<sink_obj>28</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_44">
+				<id>69</id>
+				<edge_type>1</edge_type>
+				<source_obj>28</source_obj>
 				<sink_obj>29</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_64">
-				<id>207</id>
+			<item class_id_reference="20" object_id="_45">
+				<id>70</id>
 				<edge_type>2</edge_type>
-				<source_obj>29</source_obj>
+				<source_obj>43</source_obj>
+				<sink_obj>29</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_46">
+				<id>71</id>
+				<edge_type>2</edge_type>
+				<source_obj>46</source_obj>
+				<sink_obj>29</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_47">
+				<id>73</id>
+				<edge_type>1</edge_type>
+				<source_obj>72</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_48">
+				<id>74</id>
+				<edge_type>1</edge_type>
+				<source_obj>1</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_49">
+				<id>75</id>
+				<edge_type>1</edge_type>
+				<source_obj>2</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_50">
+				<id>76</id>
+				<edge_type>1</edge_type>
+				<source_obj>3</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_51">
+				<id>77</id>
+				<edge_type>1</edge_type>
+				<source_obj>4</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_52">
+				<id>78</id>
+				<edge_type>1</edge_type>
+				<source_obj>5</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_53">
+				<id>79</id>
+				<edge_type>1</edge_type>
+				<source_obj>6</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_54">
+				<id>80</id>
+				<edge_type>1</edge_type>
+				<source_obj>7</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_55">
+				<id>81</id>
+				<edge_type>1</edge_type>
+				<source_obj>8</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_56">
+				<id>82</id>
+				<edge_type>1</edge_type>
+				<source_obj>9</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_57">
+				<id>83</id>
+				<edge_type>2</edge_type>
+				<source_obj>51</source_obj>
 				<sink_obj>45</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_65">
-				<id>208</id>
+			<item class_id_reference="20" object_id="_58">
+				<id>86</id>
+				<edge_type>1</edge_type>
+				<source_obj>9</source_obj>
+				<sink_obj>40</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_59">
+				<id>88</id>
+				<edge_type>1</edge_type>
+				<source_obj>87</source_obj>
+				<sink_obj>40</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_60">
+				<id>91</id>
+				<edge_type>1</edge_type>
+				<source_obj>8</source_obj>
+				<sink_obj>41</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_61">
+				<id>93</id>
+				<edge_type>1</edge_type>
+				<source_obj>92</source_obj>
+				<sink_obj>41</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_62">
+				<id>222</id>
 				<edge_type>2</edge_type>
-				<source_obj>29</source_obj>
-				<sink_obj>42</sink_obj>
+				<source_obj>25</source_obj>
+				<sink_obj>49</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_63">
+				<id>223</id>
+				<edge_type>2</edge_type>
+				<source_obj>25</source_obj>
+				<sink_obj>30</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_64">
+				<id>224</id>
+				<edge_type>2</edge_type>
+				<source_obj>30</source_obj>
+				<sink_obj>46</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_65">
+				<id>225</id>
+				<edge_type>2</edge_type>
+				<source_obj>30</source_obj>
+				<sink_obj>43</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_66">
-				<id>209</id>
+				<id>226</id>
 				<edge_type>2</edge_type>
-				<source_obj>45</source_obj>
-				<sink_obj>50</sink_obj>
+				<source_obj>46</source_obj>
+				<sink_obj>51</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_67">
-				<id>210</id>
+				<id>227</id>
 				<edge_type>2</edge_type>
-				<source_obj>48</source_obj>
-				<sink_obj>50</sink_obj>
+				<source_obj>49</source_obj>
+				<sink_obj>51</sink_obj>
 			</item>
 		</edges>
 	</cdfg>
@@ -1144,12 +1144,12 @@
 			<basic_blocks>
 				<count>6</count>
 				<item_version>0</item_version>
-				<item>24</item>
-				<item>29</item>
-				<item>42</item>
-				<item>45</item>
-				<item>48</item>
-				<item>50</item>
+				<item>25</item>
+				<item>30</item>
+				<item>43</item>
+				<item>46</item>
+				<item>49</item>
+				<item>51</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -1168,7 +1168,7 @@
 			<item class_id="26" tracking_level="1" version="0" object_id="_70">
 				<id>1</id>
 				<operations class_id="27" tracking_level="0" version="0">
-					<count>30</count>
+					<count>31</count>
 					<item_version>0</item_version>
 					<item class_id="28" tracking_level="1" version="0" object_id="_71">
 						<id>12</id>
@@ -1231,7 +1231,7 @@
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_83">
-						<id>25</id>
+						<id>24</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
@@ -1251,7 +1251,7 @@
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_87">
-						<id>30</id>
+						<id>29</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
@@ -1311,44 +1311,49 @@
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_99">
-						<id>43</id>
+						<id>42</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_100">
+						<id>44</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
-					<item class_id_reference="28" object_id="_100">
-						<id>46</id>
+					<item class_id_reference="28" object_id="_101">
+						<id>47</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_101">
+			<item class_id_reference="26" object_id="_102">
 				<id>2</id>
 				<operations>
 					<count>5</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_102">
-						<id>43</id>
-						<stage>1</stage>
-						<latency>2</latency>
-					</item>
 					<item class_id_reference="28" object_id="_103">
 						<id>44</id>
 						<stage>1</stage>
-						<latency>1</latency>
+						<latency>2</latency>
 					</item>
 					<item class_id_reference="28" object_id="_104">
-						<id>46</id>
+						<id>45</id>
 						<stage>1</stage>
-						<latency>2</latency>
+						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_105">
 						<id>47</id>
 						<stage>1</stage>
-						<latency>1</latency>
+						<latency>2</latency>
 					</item>
 					<item class_id_reference="28" object_id="_106">
-						<id>49</id>
+						<id>48</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_107">
+						<id>50</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
@@ -1358,7 +1363,7 @@
 		<transitions class_id="29" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="30" tracking_level="1" version="0" object_id="_107">
+			<item class_id="30" tracking_level="1" version="0" object_id="_108">
 				<inState>1</inState>
 				<outState>2</outState>
 				<condition class_id="31" tracking_level="0" version="0">
@@ -1371,7 +1376,7 @@
 							<item_version>0</item_version>
 							<item class_id="34" tracking_level="0" version="0">
 								<first class_id="35" tracking_level="0" version="0">
-									<first>22</first>
+									<first>23</first>
 									<second>0</second>
 								</first>
 								<second>0</second>
@@ -1382,7 +1387,7 @@
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<first>27</first>
+									<first>28</first>
 									<second>0</second>
 								</first>
 								<second>0</second>
@@ -1398,21 +1403,14 @@
 		<count>12</count>
 		<item_version>0</item_version>
 		<item class_id="38" tracking_level="0" version="0">
-			<first>22</first>
+			<first>23</first>
 			<second class_id="39" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>23</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>27</first>
+			<first>24</first>
 			<second>
 				<first>0</first>
 				<second>0</second>
@@ -1426,7 +1424,7 @@
 			</second>
 		</item>
 		<item>
-			<first>39</first>
+			<first>29</first>
 			<second>
 				<first>0</first>
 				<second>0</second>
@@ -1447,16 +1445,69 @@
 			</second>
 		</item>
 		<item>
-			<first>43</first>
+			<first>42</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>44</first>
 			<second>
 				<first>0</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
-			<first>44</first>
+			<first>45</first>
 			<second>
 				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>47</first>
+			<second>
+				<first>0</first>
+				<second>1</second>
+			</second>
+		</item>
+		<item>
+			<first>48</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>50</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+	</node_label_latency>
+	<bblk_ent_exit class_id="40" tracking_level="0" version="0">
+		<count>6</count>
+		<item_version>0</item_version>
+		<item class_id="41" tracking_level="0" version="0">
+			<first>25</first>
+			<second class_id="42" tracking_level="0" version="0">
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>30</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>43</first>
+			<second>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -1468,60 +1519,14 @@
 			</second>
 		</item>
 		<item>
-			<first>47</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
 			<first>49</first>
 			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-	</node_label_latency>
-	<bblk_ent_exit class_id="40" tracking_level="0" version="0">
-		<count>6</count>
-		<item_version>0</item_version>
-		<item class_id="41" tracking_level="0" version="0">
-			<first>24</first>
-			<second class_id="42" tracking_level="0" version="0">
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>29</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>42</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>45</first>
-			<second>
 				<first>0</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
-			<first>48</first>
-			<second>
-				<first>0</first>
-				<second>1</second>
-			</second>
-		</item>
-		<item>
-			<first>50</first>
+			<first>51</first>
 			<second>
 				<first>1</first>
 				<second>1</second>
@@ -1536,15 +1541,7 @@
 		<count>6</count>
 		<item_version>0</item_version>
 		<item class_id="45" tracking_level="0" version="0">
-			<first>74</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>39</item>
-			</second>
-		</item>
-		<item>
-			<first>82</first>
+			<first>84</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1552,37 +1549,45 @@
 			</second>
 		</item>
 		<item>
-			<first>90</first>
-			<second>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>43</item>
-				<item>43</item>
-			</second>
-		</item>
-		<item>
-			<first>112</first>
-			<second>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>46</item>
-				<item>46</item>
-			</second>
-		</item>
-		<item>
-			<first>134</first>
+			<first>92</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>22</item>
+				<item>41</item>
 			</second>
 		</item>
 		<item>
-			<first>138</first>
+			<first>100</first>
+			<second>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>44</item>
+				<item>44</item>
+			</second>
+		</item>
+		<item>
+			<first>122</first>
+			<second>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>47</item>
+				<item>47</item>
+			</second>
+		</item>
+		<item>
+			<first>144</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>27</item>
+				<item>23</item>
+			</second>
+		</item>
+		<item>
+			<first>148</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>28</item>
 			</second>
 		</item>
 	</dp_fu_nodes>
@@ -1594,21 +1599,21 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
-			<first>grp_advios_adviosThread_fu_112</first>
+			<first>grp_advios_adviosThread_fu_122</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>46</item>
-				<item>46</item>
+				<item>47</item>
+				<item>47</item>
 			</second>
 		</item>
 		<item>
-			<first>grp_advios_clkDivide_fu_90</first>
+			<first>grp_advios_clkDivide_fu_100</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>43</item>
-				<item>43</item>
+				<item>44</item>
+				<item>44</item>
 			</second>
 		</item>
 	</dp_fu_nodes_module>
@@ -1616,15 +1621,7 @@
 		<count>4</count>
 		<item_version>0</item_version>
 		<item>
-			<first>StgValue_28_write_fu_74</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>39</item>
-			</second>
-		</item>
-		<item>
-			<first>StgValue_29_write_fu_82</first>
+			<first>StgValue_29_write_fu_84</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1632,19 +1629,27 @@
 			</second>
 		</item>
 		<item>
-			<first>advios_ssdm_threa_1_load_fu_138</first>
+			<first>StgValue_30_write_fu_92</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>27</item>
+				<item>41</item>
 			</second>
 		</item>
 		<item>
-			<first>advios_ssdm_threa_load_fu_134</first>
+			<first>advios_ssdm_threa_1_load_fu_148</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>22</item>
+				<item>28</item>
+			</second>
+		</item>
+		<item>
+			<first>advios_ssdm_threa_load_fu_144</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>23</item>
 			</second>
 		</item>
 	</dp_fu_nodes_io>
@@ -1660,11 +1665,11 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item>
-			<first>142</first>
+			<first>152</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>22</item>
+				<item>23</item>
 			</second>
 		</item>
 	</dp_reg_nodes>
@@ -1672,11 +1677,11 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item>
-			<first>advios_ssdm_threa_reg_142</first>
+			<first>advios_ssdm_threa_reg_152</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>22</item>
+				<item>23</item>
 			</second>
 		</item>
 	</dp_regname_nodes>
@@ -1701,8 +1706,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>46</item>
-						<item>43</item>
+						<item>47</item>
+						<item>44</item>
 					</second>
 				</item>
 			</second>
@@ -1717,8 +1722,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>46</item>
-						<item>43</item>
+						<item>47</item>
+						<item>44</item>
 					</second>
 				</item>
 			</second>
@@ -1733,8 +1738,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>46</item>
-						<item>43</item>
+						<item>47</item>
+						<item>44</item>
 					</second>
 				</item>
 			</second>
@@ -1749,8 +1754,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>46</item>
-						<item>43</item>
+						<item>47</item>
+						<item>44</item>
 					</second>
 				</item>
 			</second>
@@ -1765,16 +1770,20 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>46</item>
-						<item>43</item>
+						<item>47</item>
+						<item>44</item>
 					</second>
 				</item>
 			</second>
 		</item>
 	</dp_port_io_nodes>
 	<port2core class_id="52" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item class_id="53" tracking_level="0" version="0">
+			<first>3</first>
+			<second>AXI4LiteS</second>
+		</item>
 	</port2core>
 	<node2core>
 		<count>0</count>

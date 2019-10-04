@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'advios_adviosThread'
 ================================================================
-* Date:           Thu Oct  3 19:01:38 2019
+* Date:           Fri Oct  4 12:50:51 2019
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        lab7_HLS
@@ -116,118 +116,121 @@ ST_1: StgValue_13 (18)  [1/1] 0.00ns
 ST_1: StgValue_14 (19)  [1/1] 0.00ns
 :9  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
 
-ST_1: StgValue_15 (20)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:24
+ST_1: StgValue_15 (20)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:23
 :10  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
 
-ST_1: StgValue_16 (21)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:25
+ST_1: StgValue_16 (21)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:24
 :11  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
 
-ST_1: StgValue_17 (22)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:26
+ST_1: StgValue_17 (22)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:25
 :12  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
 
-ST_1: StgValue_18 (23)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:27
+ST_1: StgValue_18 (23)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:26
 :13  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
 
-ST_1: StgValue_19 (24)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
+ST_1: StgValue_19 (24)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:27
 :14  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
 
-ST_1: StgValue_20 (25)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:29
+ST_1: StgValue_20 (25)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
 :15  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [13 x i8]* @p_str16) nounwind
 
-ST_1: tmp_3 (26)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:29
+ST_1: tmp_3 (26)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
 :16  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9)
 
-ST_1: StgValue_22 (27)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:29
+ST_1: StgValue_22 (27)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
 :17  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind
 
-ST_1: p_ssdm_reset_v (28)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:29
+ST_1: p_ssdm_reset_v (28)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
 :18  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind
 
-ST_1: empty (29)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:26
-:19  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
+ST_1: StgValue_24 (29)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:25
+:19  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
 
-ST_1: empty_4 (30)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:26
-:20  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp_3)
+ST_1: empty (30)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
+:20  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
+
+ST_1: empty_4 (31)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
+:21  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp_3)
 
 
  <State 2>: 1.59ns
-ST_2: StgValue_26 (31)  [1/1] 1.59ns
-:21  store i4 0, i4* %v_V
+ST_2: StgValue_27 (32)  [1/1] 1.59ns
+:22  store i4 0, i4* %v_V
 
-ST_2: StgValue_27 (32)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:26
-:22  br label %1
+ST_2: StgValue_28 (33)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:28
+:23  br label %1
 
 
  <State 3>: 3.10ns
-ST_3: val_V (34)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:32
+ST_3: val_V (35)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:34
 :0  %val_V = call i4 @_ssdm_op_Read.ap_auto.volatile.i4P(i4* %ctrl)
 
-ST_3: val_V_1 (35)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:33
+ST_3: val_V_1 (36)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:35
 :1  %val_V_1 = call i4 @_ssdm_op_Read.ap_auto.volatile.i4P(i4* %inSwitch)
 
-ST_3: tmp (36)  [1/1] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:34
+ST_3: tmp (37)  [1/1] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:36
 :2  %tmp = icmp eq i4 %val_V, 0
 
-ST_3: StgValue_31 (37)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:34
+ST_3: StgValue_32 (38)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:36
 :3  br i1 %tmp, label %2, label %6
 
-ST_3: v_V_1 (39)  [1/1] 2.07ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:57
+ST_3: v_V_1 (40)  [1/1] 2.07ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:59
 :0  %v_V_1 = and i4 %val_V_1, %val_V
 
-ST_3: StgValue_33 (40)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:57
+ST_3: StgValue_34 (41)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:59
 :1  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %outLeds, i4 %v_V_1)
 
-ST_3: StgValue_34 (41)  [1/1] 0.00ns
+ST_3: StgValue_35 (42)  [1/1] 0.00ns
 :2  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
 
-ST_3: v_V_load_1 (43)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:36
+ST_3: v_V_load_1 (44)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:38
 :0  %v_V_load_1 = load i4* %v_V
 
-ST_3: StgValue_36 (44)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:36
+ST_3: StgValue_37 (45)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:38
 :1  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %outLeds, i4 %v_V_load_1)
 
-ST_3: tmp_2 (45)  [1/1] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:38
+ST_3: tmp_2 (46)  [1/1] 3.10ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:40
 :2  %tmp_2 = icmp eq i4 %val_V_1, -8
 
-ST_3: StgValue_38 (46)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:38
+ST_3: StgValue_39 (47)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:40
 :3  br i1 %tmp_2, label %3, label %4
 
-ST_3: tmp_1 (48)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:46
+ST_3: tmp_1 (49)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:48
 :0  %tmp_1 = call i1 @_ssdm_op_Read.ap_auto.volatile.i1P(i1* %oneSecPulse)
 
-ST_3: StgValue_40 (49)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:46
+ST_3: StgValue_41 (50)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:48
 :1  br i1 %tmp_1, label %5, label %_ZN7_ap_sc_7sc_core4waitEi.exit
 
 
  <State 4>: 3.94ns
-ST_4: v_V_load (51)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:49
+ST_4: v_V_load (52)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:51
 :0  %v_V_load = load i4* %v_V
 
-ST_4: cnt_V (52)  [1/1] 2.35ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:49
+ST_4: cnt_V (53)  [1/1] 2.35ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:51
 :1  %cnt_V = add i4 %v_V_load, 1
 
-ST_4: StgValue_43 (53)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:50
+ST_4: StgValue_44 (54)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:52
 :2  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %outLeds, i4 %cnt_V)
 
-ST_4: StgValue_44 (54)  [1/1] 1.59ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:50
+ST_4: StgValue_45 (55)  [1/1] 1.59ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:52
 :3  store i4 %cnt_V, i4* %v_V
 
-ST_4: StgValue_45 (55)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:51
+ST_4: StgValue_46 (56)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:53
 :4  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
 
-ST_4: StgValue_46 (57)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:40
+ST_4: StgValue_47 (58)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:42
 :0  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %outLeds, i4 0)
 
-ST_4: StgValue_47 (58)  [1/1] 1.59ns
+ST_4: StgValue_48 (59)  [1/1] 1.59ns
 :1  store i4 0, i4* %v_V
 
-ST_4: StgValue_48 (59)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:42
+ST_4: StgValue_49 (60)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:44
 :2  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
 
-ST_4: StgValue_49 (61)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:60
+ST_4: StgValue_50 (62)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:62
 _ZN7_ap_sc_7sc_core4waitEi.exit:0  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
 
-ST_4: StgValue_50 (62)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:61
+ST_4: StgValue_51 (63)  [1/1] 0.00ns  loc: ../Assignment_lab7/Assignment_lab7/Advios.cpp:63
 _ZN7_ap_sc_7sc_core4waitEi.exit:1  br label %1
 
 
@@ -242,18 +245,18 @@ The critical path consists of the following:
 
  <State 2>: 1.59ns
 The critical path consists of the following:
-	'store' operation of constant 0 on local variable 'v.V' [31]  (1.59 ns)
+	'store' operation of constant 0 on local variable 'v.V' [32]  (1.59 ns)
 
  <State 3>: 3.1ns
 The critical path consists of the following:
-	wire read on port 'ctrl' (../Assignment_lab7/Assignment_lab7/Advios.cpp:32) [34]  (0 ns)
-	'icmp' operation ('tmp', ../Assignment_lab7/Assignment_lab7/Advios.cpp:34) [36]  (3.1 ns)
+	wire read on port 'ctrl' (../Assignment_lab7/Assignment_lab7/Advios.cpp:34) [35]  (0 ns)
+	'icmp' operation ('tmp', ../Assignment_lab7/Assignment_lab7/Advios.cpp:36) [37]  (3.1 ns)
 
  <State 4>: 3.94ns
 The critical path consists of the following:
-	'load' operation ('v_V_load', ../Assignment_lab7/Assignment_lab7/Advios.cpp:49) on local variable 'v.V' [51]  (0 ns)
-	'add' operation ('cnt.V', ../Assignment_lab7/Assignment_lab7/Advios.cpp:49) [52]  (2.35 ns)
-	'store' operation (../Assignment_lab7/Assignment_lab7/Advios.cpp:50) of variable 'cnt.V', ../Assignment_lab7/Assignment_lab7/Advios.cpp:49 on local variable 'v.V' [54]  (1.59 ns)
+	'load' operation ('v_V_load', ../Assignment_lab7/Assignment_lab7/Advios.cpp:51) on local variable 'v.V' [52]  (0 ns)
+	'add' operation ('cnt.V', ../Assignment_lab7/Assignment_lab7/Advios.cpp:51) [53]  (2.35 ns)
+	'store' operation (../Assignment_lab7/Assignment_lab7/Advios.cpp:52) of variable 'cnt.V', ../Assignment_lab7/Assignment_lab7/Advios.cpp:51 on local variable 'v.V' [55]  (1.59 ns)
 
 
 ============================================================

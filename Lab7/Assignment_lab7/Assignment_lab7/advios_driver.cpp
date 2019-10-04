@@ -2,6 +2,7 @@
 
 void advios_driver::test() {
 
+
 	//Variables
 	sc_uint<NUM_BITS> sw_test;
 	sc_uint<NUM_BITS> ctrl_test;

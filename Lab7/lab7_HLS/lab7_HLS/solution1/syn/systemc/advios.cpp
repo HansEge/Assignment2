@@ -22,22 +22,22 @@ const sc_logic advios::ap_const_logic_0 = sc_dt::Log_0;
 const bool advios::ap_const_boolean_1 = true;
 
 advios::advios(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    grp_advios_clkDivide_fu_90 = new advios_clkDivide("grp_advios_clkDivide_fu_90");
-    grp_advios_clkDivide_fu_90->ap_clk(clk);
-    grp_advios_clkDivide_fu_90->ap_rst(reset);
-    grp_advios_clkDivide_fu_90->oneSecPulse(grp_advios_clkDivide_fu_90_oneSecPulse);
-    grp_advios_clkDivide_fu_90->oneSecPulse_ap_vld(grp_advios_clkDivide_fu_90_oneSecPulse_ap_vld);
-    grp_advios_clkDivide_fu_90->advios_clkCount_i(advios_clkCount);
-    grp_advios_clkDivide_fu_90->advios_clkCount_o(grp_advios_clkDivide_fu_90_advios_clkCount_o);
-    grp_advios_clkDivide_fu_90->advios_clkCount_o_ap_vld(grp_advios_clkDivide_fu_90_advios_clkCount_o_ap_vld);
-    grp_advios_adviosThread_fu_112 = new advios_adviosThread("grp_advios_adviosThread_fu_112");
-    grp_advios_adviosThread_fu_112->ap_clk(clk);
-    grp_advios_adviosThread_fu_112->ap_rst(reset);
-    grp_advios_adviosThread_fu_112->ctrl(ctrl);
-    grp_advios_adviosThread_fu_112->inSwitch(inSwitch);
-    grp_advios_adviosThread_fu_112->outLeds(grp_advios_adviosThread_fu_112_outLeds);
-    grp_advios_adviosThread_fu_112->outLeds_ap_vld(grp_advios_adviosThread_fu_112_outLeds_ap_vld);
-    grp_advios_adviosThread_fu_112->oneSecPulse(grp_advios_adviosThread_fu_112_oneSecPulse);
+    grp_advios_clkDivide_fu_100 = new advios_clkDivide("grp_advios_clkDivide_fu_100");
+    grp_advios_clkDivide_fu_100->ap_clk(clk);
+    grp_advios_clkDivide_fu_100->ap_rst(reset);
+    grp_advios_clkDivide_fu_100->oneSecPulse(grp_advios_clkDivide_fu_100_oneSecPulse);
+    grp_advios_clkDivide_fu_100->oneSecPulse_ap_vld(grp_advios_clkDivide_fu_100_oneSecPulse_ap_vld);
+    grp_advios_clkDivide_fu_100->advios_clkCount_i(advios_clkCount);
+    grp_advios_clkDivide_fu_100->advios_clkCount_o(grp_advios_clkDivide_fu_100_advios_clkCount_o);
+    grp_advios_clkDivide_fu_100->advios_clkCount_o_ap_vld(grp_advios_clkDivide_fu_100_advios_clkCount_o_ap_vld);
+    grp_advios_adviosThread_fu_122 = new advios_adviosThread("grp_advios_adviosThread_fu_122");
+    grp_advios_adviosThread_fu_122->ap_clk(clk);
+    grp_advios_adviosThread_fu_122->ap_rst(reset);
+    grp_advios_adviosThread_fu_122->ctrl(ctrl);
+    grp_advios_adviosThread_fu_122->inSwitch(inSwitch);
+    grp_advios_adviosThread_fu_122->outLeds(grp_advios_adviosThread_fu_122_outLeds);
+    grp_advios_adviosThread_fu_122->outLeds_ap_vld(grp_advios_adviosThread_fu_122_outLeds_ap_vld);
+    grp_advios_adviosThread_fu_122->oneSecPulse(grp_advios_adviosThread_fu_122_oneSecPulse);
 
     SC_METHOD(thread_advios_clkCount);
     dont_initialize();
@@ -51,9 +51,9 @@ advios::advios(sc_module_name name) : sc_module(name), mVcdFile(0) {
     dont_initialize();
     sensitive << ( clk.pos() );
 
-    SC_METHOD(thread_advios_ssdm_threa_1_load_fu_138_p1);
+    SC_METHOD(thread_advios_ssdm_threa_1_load_fu_148_p1);
 
-    SC_METHOD(thread_advios_ssdm_threa_load_fu_134_p1);
+    SC_METHOD(thread_advios_ssdm_threa_load_fu_144_p1);
 
     SC_METHOD(thread_ap_CS_fsm);
 
@@ -63,8 +63,8 @@ advios::advios(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_ap_CS_fsm_state2);
     sensitive << ( ap_CS_fsm );
 
-    SC_METHOD(thread_grp_advios_adviosThread_fu_112_oneSecPulse);
-    sensitive << ( advios_ssdm_threa_load_fu_134_p1 );
+    SC_METHOD(thread_grp_advios_adviosThread_fu_122_oneSecPulse);
+    sensitive << ( advios_ssdm_threa_load_fu_144_p1 );
     sensitive << ( ap_CS_fsm_state2 );
     sensitive << ( oneSecPulse );
 
@@ -86,20 +86,20 @@ advios::advios(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, outLeds, "(port)outLeds");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
-    sc_trace(mVcdFile, advios_ssdm_threa_load_fu_134_p1, "advios_ssdm_threa_load_fu_134_p1");
+    sc_trace(mVcdFile, advios_ssdm_threa_load_fu_144_p1, "advios_ssdm_threa_load_fu_144_p1");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, grp_advios_clkDivide_fu_90_oneSecPulse, "grp_advios_clkDivide_fu_90_oneSecPulse");
-    sc_trace(mVcdFile, grp_advios_clkDivide_fu_90_oneSecPulse_ap_vld, "grp_advios_clkDivide_fu_90_oneSecPulse_ap_vld");
-    sc_trace(mVcdFile, grp_advios_clkDivide_fu_90_advios_clkCount_o, "grp_advios_clkDivide_fu_90_advios_clkCount_o");
-    sc_trace(mVcdFile, grp_advios_clkDivide_fu_90_advios_clkCount_o_ap_vld, "grp_advios_clkDivide_fu_90_advios_clkCount_o_ap_vld");
-    sc_trace(mVcdFile, grp_advios_adviosThread_fu_112_outLeds, "grp_advios_adviosThread_fu_112_outLeds");
-    sc_trace(mVcdFile, grp_advios_adviosThread_fu_112_outLeds_ap_vld, "grp_advios_adviosThread_fu_112_outLeds_ap_vld");
-    sc_trace(mVcdFile, grp_advios_adviosThread_fu_112_oneSecPulse, "grp_advios_adviosThread_fu_112_oneSecPulse");
+    sc_trace(mVcdFile, grp_advios_clkDivide_fu_100_oneSecPulse, "grp_advios_clkDivide_fu_100_oneSecPulse");
+    sc_trace(mVcdFile, grp_advios_clkDivide_fu_100_oneSecPulse_ap_vld, "grp_advios_clkDivide_fu_100_oneSecPulse_ap_vld");
+    sc_trace(mVcdFile, grp_advios_clkDivide_fu_100_advios_clkCount_o, "grp_advios_clkDivide_fu_100_advios_clkCount_o");
+    sc_trace(mVcdFile, grp_advios_clkDivide_fu_100_advios_clkCount_o_ap_vld, "grp_advios_clkDivide_fu_100_advios_clkCount_o_ap_vld");
+    sc_trace(mVcdFile, grp_advios_adviosThread_fu_122_outLeds, "grp_advios_adviosThread_fu_122_outLeds");
+    sc_trace(mVcdFile, grp_advios_adviosThread_fu_122_outLeds_ap_vld, "grp_advios_adviosThread_fu_122_outLeds_ap_vld");
+    sc_trace(mVcdFile, grp_advios_adviosThread_fu_122_oneSecPulse, "grp_advios_adviosThread_fu_122_oneSecPulse");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
     sc_trace(mVcdFile, oneSecPulse, "oneSecPulse");
     sc_trace(mVcdFile, advios_clkCount, "advios_clkCount");
-    sc_trace(mVcdFile, advios_ssdm_threa_1_load_fu_138_p1, "advios_ssdm_threa_1_load_fu_138_p1");
+    sc_trace(mVcdFile, advios_ssdm_threa_1_load_fu_148_p1, "advios_ssdm_threa_1_load_fu_148_p1");
 #endif
 
     }
@@ -115,38 +115,38 @@ advios::~advios() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete grp_advios_clkDivide_fu_90;
-    delete grp_advios_adviosThread_fu_112;
+    delete grp_advios_clkDivide_fu_100;
+    delete grp_advios_adviosThread_fu_122;
 }
 
 void advios::thread_advios_clkCount() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, advios_ssdm_threa_load_fu_134_p1.read()) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, advios_ssdm_threa_1_load_fu_138_p1.read()))) {
+         esl_seteq<1,1,1>(ap_const_lv1_0, advios_ssdm_threa_load_fu_144_p1.read()) && 
+         esl_seteq<1,1,1>(ap_const_lv1_0, advios_ssdm_threa_1_load_fu_148_p1.read()))) {
         advios_clkCount = ap_const_lv32_0;
-    } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_clkDivide_fu_90_advios_clkCount_o_ap_vld.read())) {
-        advios_clkCount = grp_advios_clkDivide_fu_90_advios_clkCount_o.read();
+    } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_clkDivide_fu_100_advios_clkCount_o_ap_vld.read())) {
+        advios_clkCount = grp_advios_clkDivide_fu_100_advios_clkCount_o.read();
     }
 }
 
 void advios::thread_oneSecPulse() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_clkDivide_fu_90_oneSecPulse_ap_vld.read())) {
-        oneSecPulse =  (sc_lv<1>) (grp_advios_clkDivide_fu_90_oneSecPulse.read());
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_clkDivide_fu_100_oneSecPulse_ap_vld.read())) {
+        oneSecPulse =  (sc_lv<1>) (grp_advios_clkDivide_fu_100_oneSecPulse.read());
     }
 }
 
 void advios::thread_outLeds() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_adviosThread_fu_112_outLeds_ap_vld.read())) {
-        outLeds = grp_advios_adviosThread_fu_112_outLeds.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_adviosThread_fu_122_outLeds_ap_vld.read())) {
+        outLeds = grp_advios_adviosThread_fu_122_outLeds.read();
     }
 }
 
-void advios::thread_advios_ssdm_threa_1_load_fu_138_p1() {
-    advios_ssdm_threa_1_load_fu_138_p1 = ap_const_lv1_0;
+void advios::thread_advios_ssdm_threa_1_load_fu_148_p1() {
+    advios_ssdm_threa_1_load_fu_148_p1 = ap_const_lv1_0;
 }
 
-void advios::thread_advios_ssdm_threa_load_fu_134_p1() {
-    advios_ssdm_threa_load_fu_134_p1 = ap_const_lv1_0;
+void advios::thread_advios_ssdm_threa_load_fu_144_p1() {
+    advios_ssdm_threa_load_fu_144_p1 = ap_const_lv1_0;
 }
 
 void advios::thread_ap_CS_fsm() {
@@ -161,8 +161,8 @@ void advios::thread_ap_CS_fsm_state2() {
     ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
 }
 
-void advios::thread_grp_advios_adviosThread_fu_112_oneSecPulse() {
-    grp_advios_adviosThread_fu_112_oneSecPulse =  (sc_logic) (oneSecPulse.read()[0]);
+void advios::thread_grp_advios_adviosThread_fu_122_oneSecPulse() {
+    grp_advios_adviosThread_fu_122_oneSecPulse =  (sc_logic) (oneSecPulse.read()[0]);
 }
 
 void advios::thread_hdltv_gen() {

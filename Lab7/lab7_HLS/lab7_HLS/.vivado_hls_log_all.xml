@@ -12,12 +12,13 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'advios_clkCount'('advios_clkCount_read', ../Assignment_lab7/Assignment_lab7/Advios.cpp:9), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch." projectName="lab7_HLS" solutionName="solution1" date="2019-10-03T19:01:37.996+0200" type="Warning"/>
-        <logs message="WARNING: [SCA 200-202] Signal 'advios_clkCount' has no reset." projectName="lab7_HLS" solutionName="solution1" date="2019-10-03T19:01:37.987+0200" type="Warning"/>
-        <logs message="WARNING: [SCA 200-202] Signal 'oneSecPulse' has no reset." projectName="lab7_HLS" solutionName="solution1" date="2019-10-03T19:01:37.979+0200" type="Warning"/>
-        <logs message="WARNING: [SCA 200-202] Port 'outLeds' has no reset." projectName="lab7_HLS" solutionName="solution1" date="2019-10-03T19:01:37.969+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (../Assignment_lab7/Assignment_lab7/Advios.cpp:34:3) in function 'advios::adviosThread' is an infinite loop." projectName="lab7_HLS" solutionName="solution1" date="2019-10-03T19:01:37.959+0200" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (../Assignment_lab7/Assignment_lab7/Advios.cpp:10:3) in function 'advios::clkDivide' is an infinite loop." projectName="lab7_HLS" solutionName="solution1" date="2019-10-03T19:01:37.658+0200" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'advios_clkCount'('advios_clkCount_read', ../Assignment_lab7/Assignment_lab7/Advios.cpp:8), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch." projectName="lab7_HLS" solutionName="solution1" date="2019-10-04T12:50:51.651+0200" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Signal 'advios_clkCount' has no reset." projectName="lab7_HLS" solutionName="solution1" date="2019-10-04T12:50:51.640+0200" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Signal 'oneSecPulse' has no reset." projectName="lab7_HLS" solutionName="solution1" date="2019-10-04T12:50:51.627+0200" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Port 'outLeds' has no reset." projectName="lab7_HLS" solutionName="solution1" date="2019-10-04T12:50:51.609+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (../Assignment_lab7/Assignment_lab7/Advios.cpp:36:3) in function 'advios::adviosThread' is an infinite loop." projectName="lab7_HLS" solutionName="solution1" date="2019-10-04T12:50:51.592+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (../Assignment_lab7/Assignment_lab7/Advios.cpp:9:3) in function 'advios::clkDivide' is an infinite loop." projectName="lab7_HLS" solutionName="solution1" date="2019-10-04T12:50:51.301+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&amp;ctrl' is deprecated. Please use the interface directive to specify the AXI interface." projectName="lab7_HLS" solutionName="solution1" date="2019-10-04T12:50:48.599+0200" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

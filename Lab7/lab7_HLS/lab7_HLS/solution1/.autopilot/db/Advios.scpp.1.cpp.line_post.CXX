@@ -550,8 +550,9 @@
 #pragma line 12 "../Assignment_lab7/Assignment_lab7/Advios.h" ::: 34419
 #pragma line 42 "../Assignment_lab7/Assignment_lab7/Advios.h" ::: 34460
 #pragma line 2 "../Assignment_lab7/Assignment_lab7/Advios.cpp" 2 ::: 34465
-#pragma line 4 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34468
-#pragma line 7 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34486
-#pragma line 23 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34504
-#pragma line 26 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34522
-#pragma line 29 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34524
+#pragma line 3 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34467
+#pragma line 6 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34485
+#pragma line 22 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34503
+#pragma line 25 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34521
+#pragma line 28 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34523
+#pragma line 31 "../Assignment_lab7/Assignment_lab7/Advios.cpp" ::: 34525

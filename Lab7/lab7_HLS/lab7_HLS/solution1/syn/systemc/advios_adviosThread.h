@@ -33,18 +33,18 @@ struct advios_adviosThread : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    sc_signal< sc_lv<1> > tmp_fu_115_p2;
-    sc_signal< sc_lv<1> > tmp_reg_153;
+    sc_signal< sc_lv<1> > tmp_fu_123_p2;
+    sc_signal< sc_lv<1> > tmp_reg_161;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state3;
-    sc_signal< sc_lv<1> > tmp_2_fu_128_p2;
-    sc_signal< sc_lv<1> > tmp_2_reg_157;
-    sc_signal< sc_lv<1> > tmp_1_reg_161;
-    sc_signal< sc_lv<4> > v_V_fu_76;
+    sc_signal< sc_lv<1> > tmp_2_fu_136_p2;
+    sc_signal< sc_lv<1> > tmp_2_reg_165;
+    sc_signal< sc_lv<1> > tmp_1_reg_169;
+    sc_signal< sc_lv<4> > v_V_fu_84;
     sc_signal< sc_logic > ap_CS_fsm_state2;
-    sc_signal< sc_lv<4> > cnt_V_fu_134_p2;
+    sc_signal< sc_lv<4> > cnt_V_fu_142_p2;
     sc_signal< sc_logic > ap_CS_fsm_state4;
-    sc_signal< sc_lv<4> > v_V_1_fu_121_p2;
+    sc_signal< sc_lv<4> > v_V_1_fu_129_p2;
     sc_signal< sc_lv<4> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
@@ -66,12 +66,12 @@ struct advios_adviosThread : public sc_module {
     void thread_ap_CS_fsm_state2();
     void thread_ap_CS_fsm_state3();
     void thread_ap_CS_fsm_state4();
-    void thread_cnt_V_fu_134_p2();
+    void thread_cnt_V_fu_142_p2();
     void thread_outLeds();
     void thread_outLeds_ap_vld();
-    void thread_tmp_2_fu_128_p2();
-    void thread_tmp_fu_115_p2();
-    void thread_v_V_1_fu_121_p2();
+    void thread_tmp_2_fu_136_p2();
+    void thread_tmp_fu_123_p2();
+    void thread_v_V_1_fu_129_p2();
     void thread_ap_NS_fsm();
 };
 

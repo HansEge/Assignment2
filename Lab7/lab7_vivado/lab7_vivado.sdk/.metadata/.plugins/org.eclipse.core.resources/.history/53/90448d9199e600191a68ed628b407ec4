@@ -1,0 +1,41 @@
+#include "xparameters.h"
+#include "xadvios.h" // Include HAL for iosc driver
+//====================================================
+void writeToCtrl(int);
+
+XAdvios adviosHLS; // Create an instance of the advios driver
+
+int main (void)
+{
+	XAdvios adviosHLS; // Create an instance of the advios driver
+
+	// Initialize the advios driver
+	if (XAdvios_Initialize(&adviosHLS, XPAR_ADVIOS_0_DEVICE_ID) != XST_SUCCESS) return XST_FAILURE;
+
+   xil_printf("-- Start of the Program --\r\n");
+
+   while(1)
+   {
+	   xil_printf("\r\n");
+	   xil_printf("-------------------------------\r\n");
+	   xil_printf("\r\n");
+	   xil_printf("Enter ctrl-value\r\n");
+
+	   int userInput = inbyte();
+	   if ((userInput <0 )||(userInput > 7))
+		{
+		   xil_printf("Value must be between 0 and 7\r\n");
+		}
+	   else
+	   {
+		   writeToCtrl(userInput);
+	   }
+   }
+}
+
+
+void writeToCtrl(int val)
+{
+	// Writing 0xff to the ctrl register of the iosc IP core
+	 XIosc_SetCtrl(&adviosHLS, val);
+}

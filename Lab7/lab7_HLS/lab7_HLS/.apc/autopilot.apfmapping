@@ -4,8 +4,8 @@
     <originFiles name="Advios.cpp" path="C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\Assignment_lab7\Assignment_lab7\Advios.cpp"/>
   </source>
   <testbench>
-    <originFiles name="tb_advios.cpp" path="C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\Assignment_lab7\Assignment_lab7\tb_advios.cpp"/>
-    <originFiles name="advios_driver.h" path="C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\Assignment_lab7\Assignment_lab7\advios_driver.h"/>
     <originFiles name="advios_driver.cpp" path="C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\Assignment_lab7\Assignment_lab7\advios_driver.cpp"/>
+    <originFiles name="advios_driver.h" path="C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\Assignment_lab7\Assignment_lab7\advios_driver.h"/>
+    <originFiles name="tb_advios.cpp" path="C:\Users\Mathi\Desktop\Skole\ERTS\Assignments\ERTS_Assignment2\Assignment2\Lab7\Assignment_lab7\Assignment_lab7\tb_advios.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
