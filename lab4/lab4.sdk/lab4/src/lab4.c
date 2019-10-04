@@ -168,6 +168,7 @@ void execute_command_3()
 	displayMatrix(pInst);
 
 	// Multiply matrices in HW.
+
 	int time_HW_pre, time_HW_post;
 	setInputMatrices(); // Make sure that matrices are "reset".
 	xil_printf("Calculating P in HW\r\n");
@@ -183,7 +184,7 @@ void execute_command_3()
 	xil_printf("\r\n");
 	xil_printf("Multiplication times (clock cycles):\r\n");
 	xil_printf("SW: %d\r\n",time_elapsed_SW);
-	xil_printf("HW: %d\r\n",time_elapsed_HW);
+	//xil_printf("HW: %d\r\n",time_elapsed_HW);
 
 
 	while(1)
