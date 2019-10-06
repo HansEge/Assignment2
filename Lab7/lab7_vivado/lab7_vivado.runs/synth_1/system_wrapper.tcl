@@ -8,26 +8,26 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.cache/wt [current_project]
-set_property parent.project_path C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.cache/wt [current_project]
+set_property parent.project_path C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_HLS/lab7_HLS/solution1/impl/ip [current_project]
-set_property ip_output_repo c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.cache/ip [current_project]
+set_property ip_repo_paths c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_HLS/lab7_HLS/solution1/impl/ip [current_project]
+set_property ip_output_repo c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
-add_files C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/system.bd
-set_property used_in_implementation false [get_files -all c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_advios_0_3/constraints/advios_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/system_ooc.xdc]
-set_property is_locked true [get_files C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/system.bd]
+read_vhdl -library xil_defaultlib C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+add_files C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/system.bd
+set_property used_in_implementation false [get_files -all c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_advios_0_3/constraints/advios_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/system_ooc.xdc]
+set_property is_locked true [get_files C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/sources_1/bd/system/system.bd]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -37,8 +37,8 @@ set_property is_locked true [get_files C:/Users/Mathi/Desktop/Skole/ERTS/Assignm
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc
-set_property used_in_implementation false [get_files C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc]
+read_xdc C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc
+set_property used_in_implementation false [get_files C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

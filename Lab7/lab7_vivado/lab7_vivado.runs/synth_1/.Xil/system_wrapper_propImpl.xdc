@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Mathi/Desktop/Skole/ERTS/Assignments/ERTS_Assignment2/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc rfile:../../../lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/stinu/OneDrive/Desktop/Computerteknologi/ERTS/Assignment2/Lab7/lab7_vivado/lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc rfile:../../../lab7_vivado.srcs/constrs_1/imports/Lab7/contraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN M14 [get_ports outLeds[0]]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

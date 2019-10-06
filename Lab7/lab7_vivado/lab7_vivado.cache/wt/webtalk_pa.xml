@@ -6,7 +6,7 @@ This means code written to parse this file will need to be revisited each subseq
 <application name="pa" timeStamp="Sun Oct  6 12:27:07 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="6ae8fe6bf9294dc1901a4678e8690e0e" type="ProjectID"/>
-<property name="ProjectIteration" value="2" type="ProjectIteration"/>
+<property name="ProjectIteration" value="3" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -25,10 +25,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CustomizeRSBBlock" value="5" type="JavaHandler"/>
 <property name="EditDelete" value="6" type="JavaHandler"/>
 <property name="NewExportHardware" value="2" type="JavaHandler"/>
-<property name="NewLaunchHardware" value="1" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="1" type="JavaHandler"/>
+<property name="OpenProject" value="1" type="JavaHandler"/>
 <property name="RegenerateRSBLayout" value="3" type="JavaHandler"/>
-<property name="RunBitgen" value="1" type="JavaHandler"/>
+<property name="RunBitgen" value="2" type="JavaHandler"/>
 <property name="RunSynthesis" value="1" type="JavaHandler"/>
 <property name="ToolsSettings" value="3" type="JavaHandler"/>
 <property name="ValidateRSBDesign" value="2" type="JavaHandler"/>
@@ -39,8 +40,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ApplyRSBMultiAutomationDialog_CHECKBOX_TREE" value="2" type="GuiResourceData"/>
 <property name="BaseDialog_APPLY" value="1" type="GuiResourceData"/>
 <property name="BaseDialog_CANCEL" value="6" type="GuiResourceData"/>
-<property name="BaseDialog_OK" value="15" type="GuiResourceData"/>
-<property name="BaseDialog_YES" value="1" type="GuiResourceData"/>
+<property name="BaseDialog_OK" value="20" type="GuiResourceData"/>
+<property name="BaseDialog_YES" value="2" type="GuiResourceData"/>
 <property name="BaseReportTab_RERUN" value="1" type="GuiResourceData"/>
 <property name="CmdMsgDialog_OK" value="1" type="GuiResourceData"/>
 <property name="CommandsInput_TYPE_TCL_COMMAND_HERE" value="1" type="GuiResourceData"/>
@@ -86,6 +87,12 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="1" type="GuiResourceData"/>
 <property name="SystemBuilderView_ADD_IP" value="7" type="GuiResourceData"/>
 <property name="SystemTreeView_SYSTEM_TREE" value="7" type="GuiResourceData"/>
+<property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="3" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="18" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="16" type="TclMode"/>
 </item>
 <item name="Other">
 <property name="GuiMode" value="14" type="GuiMode"/>
