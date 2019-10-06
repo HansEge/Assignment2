@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'advios_clkDivide'" level="0">
-<item name = "Date">Fri Oct  4 12:50:52 2019
+<item name = "Date">Sun Oct  6 13:25:10 2019
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">lab7_HLS</item>
@@ -78,8 +78,8 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="advios_clkCount_assi_fu_107_p2">+, 0, 101, 37, 32, 1</column>
-<column name="tmp_1_fu_114_p2">icmp, 0, 0, 16, 32, 27</column>
+<column name="advios_clkCount_assi_fu_105_p2">+, 0, 101, 37, 32, 1</column>
+<column name="tmp_1_fu_112_p2">icmp, 0, 0, 16, 32, 27</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -92,7 +92,7 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
-<column name="tmp_1_reg_120">1, 0, 1, 0</column>
+<column name="tmp_1_reg_118">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

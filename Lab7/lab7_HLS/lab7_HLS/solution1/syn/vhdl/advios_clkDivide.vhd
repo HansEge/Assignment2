@@ -34,14 +34,14 @@ architecture behav of advios_clkDivide is
     constant ap_const_lv32_5F5E0FF : STD_LOGIC_VECTOR (31 downto 0) := "00000101111101011110000011111111";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
-    signal tmp_1_fu_114_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_1_reg_120 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_1_fu_112_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_1_reg_118 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm : STD_LOGIC_VECTOR (2 downto 0) := "010";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal advios_clkCount_assi_fu_107_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal advios_clkCount_assi_fu_105_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
@@ -67,7 +67,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state2)) then
-                tmp_1_reg_120 <= tmp_1_fu_114_p2;
+                tmp_1_reg_118 <= tmp_1_fu_112_p2;
             end if;
         end if;
     end process;
@@ -83,23 +83,23 @@ begin
                 ap_NS_fsm <= "XXX";
         end case;
     end process;
-    advios_clkCount_assi_fu_107_p2 <= std_logic_vector(unsigned(advios_clkCount_i) + unsigned(ap_const_lv32_1));
+    advios_clkCount_assi_fu_105_p2 <= std_logic_vector(unsigned(advios_clkCount_i) + unsigned(ap_const_lv32_1));
 
-    advios_clkCount_o_assign_proc : process(tmp_1_reg_120, ap_CS_fsm_state2, advios_clkCount_assi_fu_107_p2, ap_CS_fsm_state3)
+    advios_clkCount_o_assign_proc : process(tmp_1_reg_118, ap_CS_fsm_state2, advios_clkCount_assi_fu_105_p2, ap_CS_fsm_state3)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_120 = ap_const_lv1_1))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_118 = ap_const_lv1_1))) then 
             advios_clkCount_o <= ap_const_lv32_0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            advios_clkCount_o <= advios_clkCount_assi_fu_107_p2;
+            advios_clkCount_o <= advios_clkCount_assi_fu_105_p2;
         else 
             advios_clkCount_o <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    advios_clkCount_o_ap_vld_assign_proc : process(tmp_1_reg_120, ap_CS_fsm_state2, ap_CS_fsm_state3)
+    advios_clkCount_o_ap_vld_assign_proc : process(tmp_1_reg_118, ap_CS_fsm_state2, ap_CS_fsm_state3)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state2) or ((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_120 = ap_const_lv1_1)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state2) or ((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_118 = ap_const_lv1_1)))) then 
             advios_clkCount_o_ap_vld <= ap_const_logic_1;
         else 
             advios_clkCount_o_ap_vld <= ap_const_logic_0;
@@ -109,11 +109,11 @@ begin
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
 
-    oneSecPulse_assign_proc : process(tmp_1_fu_114_p2, tmp_1_reg_120, ap_CS_fsm_state2, ap_CS_fsm_state3)
+    oneSecPulse_assign_proc : process(tmp_1_fu_112_p2, tmp_1_reg_118, ap_CS_fsm_state2, ap_CS_fsm_state3)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_120 = ap_const_lv1_1))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_118 = ap_const_lv1_1))) then 
             oneSecPulse <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state2) and (tmp_1_fu_114_p2 = ap_const_lv1_0))) then 
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state2) and (tmp_1_fu_112_p2 = ap_const_lv1_0))) then 
             oneSecPulse <= ap_const_logic_0;
         else 
             oneSecPulse <= 'X';
@@ -121,14 +121,14 @@ begin
     end process;
 
 
-    oneSecPulse_ap_vld_assign_proc : process(tmp_1_fu_114_p2, tmp_1_reg_120, ap_CS_fsm_state2, ap_CS_fsm_state3)
+    oneSecPulse_ap_vld_assign_proc : process(tmp_1_fu_112_p2, tmp_1_reg_118, ap_CS_fsm_state2, ap_CS_fsm_state3)
     begin
-        if ((((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_120 = ap_const_lv1_1)) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (tmp_1_fu_114_p2 = ap_const_lv1_0)))) then 
+        if ((((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_reg_118 = ap_const_lv1_1)) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (tmp_1_fu_112_p2 = ap_const_lv1_0)))) then 
             oneSecPulse_ap_vld <= ap_const_logic_1;
         else 
             oneSecPulse_ap_vld <= ap_const_logic_0;
         end if; 
     end process;
 
-    tmp_1_fu_114_p2 <= "1" when (signed(advios_clkCount_assi_fu_107_p2) > signed(ap_const_lv32_5F5E0FF)) else "0";
+    tmp_1_fu_112_p2 <= "1" when (signed(advios_clkCount_assi_fu_105_p2) > signed(ap_const_lv32_5F5E0FF)) else "0";
 end behav;

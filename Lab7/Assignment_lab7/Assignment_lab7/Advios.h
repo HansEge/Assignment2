@@ -18,13 +18,13 @@ SC_MODULE(advios) {
 	sc_in<sc_uint<NUM_BITS> > inSwitch;
 	sc_out<sc_uint<NUM_BITS> > outLeds;
 
+	// Signal to communicate between the two threads.
 	sc_signal<bool> oneSecPulse;
 
 	//Variables
 	sc_uint<8> switchs;
 
-	int clkCount;
-	bool clk1s_state;
+	int clkCount; // Used in clock-divider-thread
 
 	//Process Declaration
 	void adviosThread();
@@ -33,11 +33,13 @@ SC_MODULE(advios) {
 
 	//Constructor
 	SC_CTOR(advios) {
-		clk1s_state = false;
 		clkCount = 0;
 		//Process Registration
+		// Clock-divider-thread, which outputs a high signal to oneSecPulse once every second.
 		SC_CTHREAD(clkDivide, clk.pos());
 		reset_signal_is(reset, true);
+
+		// "Main"-thread for the module.
 		SC_CTHREAD(adviosThread, clk.pos());
 	}
 };

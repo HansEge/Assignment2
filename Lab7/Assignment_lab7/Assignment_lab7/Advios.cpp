@@ -4,7 +4,8 @@ void advios::clkDivide()
 {
 	while (1)
 	{
-		// Every 10*1000*1000 cycles, make a "true" pulse, and reset the counter.
+		// Clock = 100 MHZ.
+		// Every 100*1000*1000 cycles, make a "true" pulse, and reset the counter.
 		clkCount++;
 		if (clkCount >= 100000000)
 		{
@@ -15,6 +16,7 @@ void advios::clkDivide()
 		{
 			oneSecPulse.write(false);
 		}
+		// Wait to be triggered by clock again.
 		wait();
 	}
 }
@@ -22,6 +24,7 @@ void advios::clkDivide()
 void advios::adviosThread()
 {
 
+// Used in connecting the ctrl-port to the AXI4Lite-interface.
 #pragma HLS resource core=AXI4LiteS metadata="-bus_bundle slv0" variable=ctrl
 
 	// Init counter
@@ -44,7 +47,7 @@ void advios::adviosThread()
 			}
 			else
 			{
-				
+				// If the one-sec-pulse is high (which it is for only 1 cycle pr. second), increment the counter.
 				if (oneSecPulse == true)
 				{
 					//Increment counter, write to LEDs and wait for new clock.
@@ -59,6 +62,7 @@ void advios::adviosThread()
 			outLeds.write((val_switches & val_ctrl));
 		}
 		
+		// Wait to be triggered by clock again.
 		wait();
 	}
 }

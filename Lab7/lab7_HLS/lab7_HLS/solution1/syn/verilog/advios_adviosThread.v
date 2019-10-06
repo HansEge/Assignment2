@@ -33,18 +33,18 @@ input   oneSecPulse;
 reg[3:0] outLeds;
 reg outLeds_ap_vld;
 
-wire   [0:0] tmp_fu_123_p2;
-reg   [0:0] tmp_reg_161;
+wire   [0:0] tmp_fu_121_p2;
+reg   [0:0] tmp_reg_159;
 (* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state3;
-wire   [0:0] tmp_2_fu_136_p2;
-reg   [0:0] tmp_2_reg_165;
-reg   [0:0] tmp_1_reg_169;
-reg   [3:0] v_V_fu_84;
+wire   [0:0] tmp_2_fu_134_p2;
+reg   [0:0] tmp_2_reg_163;
+reg   [0:0] tmp_1_reg_167;
+reg   [3:0] v_V_fu_82;
 wire    ap_CS_fsm_state2;
-wire   [3:0] cnt_V_fu_142_p2;
+wire   [3:0] cnt_V_fu_140_p2;
 wire    ap_CS_fsm_state4;
-wire   [3:0] v_V_1_fu_129_p2;
+wire   [3:0] v_V_1_fu_127_p2;
 reg   [3:0] ap_NS_fsm;
 
 // power-on initialization
@@ -61,47 +61,47 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (tmp_reg_161 == 1'd1) & (tmp_2_reg_165 == 1'd0) & (1'd1 == tmp_1_reg_169))) begin
-        v_V_fu_84 <= cnt_V_fu_142_p2;
-    end else if (((1'b1 == ap_CS_fsm_state2) | ((1'b1 == ap_CS_fsm_state4) & (tmp_reg_161 == 1'd1) & (tmp_2_reg_165 == 1'd1)))) begin
-        v_V_fu_84 <= 4'd0;
+    if (((1'b1 == ap_CS_fsm_state4) & (tmp_reg_159 == 1'd1) & (tmp_2_reg_163 == 1'd0) & (1'd1 == tmp_1_reg_167))) begin
+        v_V_fu_82 <= cnt_V_fu_140_p2;
+    end else if (((1'b1 == ap_CS_fsm_state2) | ((1'b1 == ap_CS_fsm_state4) & (tmp_reg_159 == 1'd1) & (tmp_2_reg_163 == 1'd1)))) begin
+        v_V_fu_82 <= 4'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_123_p2 == 1'd1) & (tmp_2_fu_136_p2 == 1'd0))) begin
-        tmp_1_reg_169 <= oneSecPulse;
+    if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_121_p2 == 1'd1) & (tmp_2_fu_134_p2 == 1'd0))) begin
+        tmp_1_reg_167 <= oneSecPulse;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_123_p2 == 1'd1))) begin
-        tmp_2_reg_165 <= tmp_2_fu_136_p2;
+    if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_121_p2 == 1'd1))) begin
+        tmp_2_reg_163 <= tmp_2_fu_134_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        tmp_reg_161 <= tmp_fu_123_p2;
+        tmp_reg_159 <= tmp_fu_121_p2;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (tmp_reg_161 == 1'd1) & (tmp_2_reg_165 == 1'd1))) begin
+    if (((1'b1 == ap_CS_fsm_state4) & (tmp_reg_159 == 1'd1) & (tmp_2_reg_163 == 1'd1))) begin
         outLeds = 4'd0;
-    end else if (((1'b1 == ap_CS_fsm_state4) & (tmp_reg_161 == 1'd1) & (tmp_2_reg_165 == 1'd0) & (1'd1 == tmp_1_reg_169))) begin
-        outLeds = cnt_V_fu_142_p2;
-    end else if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_123_p2 == 1'd1))) begin
-        outLeds = v_V_fu_84;
-    end else if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_123_p2 == 1'd0))) begin
-        outLeds = v_V_1_fu_129_p2;
+    end else if (((1'b1 == ap_CS_fsm_state4) & (tmp_reg_159 == 1'd1) & (tmp_2_reg_163 == 1'd0) & (1'd1 == tmp_1_reg_167))) begin
+        outLeds = cnt_V_fu_140_p2;
+    end else if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_121_p2 == 1'd1))) begin
+        outLeds = v_V_fu_82;
+    end else if (((1'b1 == ap_CS_fsm_state3) & (tmp_fu_121_p2 == 1'd0))) begin
+        outLeds = v_V_1_fu_127_p2;
     end else begin
         outLeds = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((((1'b1 == ap_CS_fsm_state3) & (tmp_fu_123_p2 == 1'd1)) | ((1'b1 == ap_CS_fsm_state4) & (tmp_reg_161 == 1'd1) & (tmp_2_reg_165 == 1'd0) & (1'd1 == tmp_1_reg_169)) | ((1'b1 == ap_CS_fsm_state4) & (tmp_reg_161 == 1'd1) & (tmp_2_reg_165 == 1'd1)) | ((1'b1 == ap_CS_fsm_state3) & (tmp_fu_123_p2 == 1'd0)))) begin
+    if ((((1'b1 == ap_CS_fsm_state3) & (tmp_fu_121_p2 == 1'd1)) | ((1'b1 == ap_CS_fsm_state4) & (tmp_reg_159 == 1'd1) & (tmp_2_reg_163 == 1'd0) & (1'd1 == tmp_1_reg_167)) | ((1'b1 == ap_CS_fsm_state4) & (tmp_reg_159 == 1'd1) & (tmp_2_reg_163 == 1'd1)) | ((1'b1 == ap_CS_fsm_state3) & (tmp_fu_121_p2 == 1'd0)))) begin
         outLeds_ap_vld = 1'b1;
     end else begin
         outLeds_ap_vld = 1'b0;
@@ -134,12 +134,12 @@ assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign cnt_V_fu_142_p2 = (v_V_fu_84 + 4'd1);
+assign cnt_V_fu_140_p2 = (v_V_fu_82 + 4'd1);
 
-assign tmp_2_fu_136_p2 = ((inSwitch == 4'd8) ? 1'b1 : 1'b0);
+assign tmp_2_fu_134_p2 = ((inSwitch == 4'd8) ? 1'b1 : 1'b0);
 
-assign tmp_fu_123_p2 = ((ctrl == 4'd0) ? 1'b1 : 1'b0);
+assign tmp_fu_121_p2 = ((ctrl == 4'd0) ? 1'b1 : 1'b0);
 
-assign v_V_1_fu_129_p2 = (inSwitch & ctrl);
+assign v_V_1_fu_127_p2 = (inSwitch & ctrl);
 
 endmodule //advios_adviosThread

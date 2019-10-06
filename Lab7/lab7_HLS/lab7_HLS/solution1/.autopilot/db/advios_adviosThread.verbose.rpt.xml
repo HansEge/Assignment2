@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'advios_adviosThread'" level="0">
-<item name = "Date">Fri Oct  4 12:50:52 2019
+<item name = "Date">Sun Oct  6 13:25:09 2019
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">lab7_HLS</item>
@@ -78,26 +78,26 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="cnt_V_fu_142_p2">+, 0, 17, 9, 4, 1</column>
-<column name="v_V_1_fu_129_p2">and, 0, 0, 4, 4, 4</column>
-<column name="tmp_2_fu_136_p2">icmp, 0, 0, 2, 4, 5</column>
-<column name="tmp_fu_123_p2">icmp, 0, 0, 2, 4, 1</column>
+<column name="cnt_V_fu_140_p2">+, 0, 17, 9, 4, 1</column>
+<column name="v_V_1_fu_127_p2">and, 0, 0, 4, 4, 4</column>
+<column name="tmp_2_fu_134_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="tmp_fu_121_p2">icmp, 0, 0, 2, 4, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">27, 5, 1, 5</column>
 <column name="outLeds">27, 5, 4, 20</column>
-<column name="v_V_fu_84">9, 2, 4, 8</column>
+<column name="v_V_fu_82">9, 2, 4, 8</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">4, 0, 4, 0</column>
-<column name="tmp_1_reg_169">1, 0, 1, 0</column>
-<column name="tmp_2_reg_165">1, 0, 1, 0</column>
-<column name="tmp_reg_161">1, 0, 1, 0</column>
-<column name="v_V_fu_84">4, 0, 4, 0</column>
+<column name="tmp_1_reg_167">1, 0, 1, 0</column>
+<column name="tmp_2_reg_163">1, 0, 1, 0</column>
+<column name="tmp_reg_159">1, 0, 1, 0</column>
+<column name="v_V_fu_82">4, 0, 4, 0</column>
 </table>
 </item>
 </section>

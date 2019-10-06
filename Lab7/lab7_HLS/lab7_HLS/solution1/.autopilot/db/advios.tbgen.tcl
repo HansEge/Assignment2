@@ -52,43 +52,39 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "clk", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "clk"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "clk"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "clk"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "clk"}]},
 			{"Name" : "reset", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "reset"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "reset"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "reset"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "reset"}]},
 			{"Name" : "ctrl", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "ctrl"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "ctrl"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "ctrl"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "ctrl"}]},
 			{"Name" : "inSwitch", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "inSwitch"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "inSwitch"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "inSwitch"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "inSwitch"}]},
 			{"Name" : "outLeds", "Type" : "Vld", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "outLeds"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "outLeds"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "outLeds"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "outLeds"}]},
 			{"Name" : "oneSecPulse", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "oneSecPulse"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "oneSecPulse"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "oneSecPulse"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "oneSecPulse"}]},
 			{"Name" : "advios_switchs_V", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "advios_switchs_V"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "advios_switchs_V"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "advios_switchs_V"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "advios_switchs_V"}]},
 			{"Name" : "advios_clkCount", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "advios_clkCount"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "advios_clkCount"}]},
-			{"Name" : "advios_clk1s_state", "Type" : "OVld", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_100", "Port" : "advios_clk1s_state"},
-					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_122", "Port" : "advios_clk1s_state"}]},
+					{"ID" : "1", "SubInstance" : "grp_advios_clkDivide_fu_86", "Port" : "advios_clkCount"},
+					{"ID" : "2", "SubInstance" : "grp_advios_adviosThread_fu_106", "Port" : "advios_clkCount"}]},
 			{"Name" : "advios_ssdm_thread_M_adviosThread", "Type" : "None", "Direction" : "I"},
 			{"Name" : "advios_ssdm_thread_M_clkDivide", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_advios_clkDivide_fu_100", "Parent" : "0",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_advios_clkDivide_fu_86", "Parent" : "0",
 		"CDFG" : "advios_clkDivide",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -104,9 +100,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "outLeds", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "oneSecPulse", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "advios_switchs_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "advios_clkCount", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "advios_clk1s_state", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_advios_adviosThread_fu_122", "Parent" : "0",
+			{"Name" : "advios_clkCount", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_advios_adviosThread_fu_106", "Parent" : "0",
 		"CDFG" : "advios_adviosThread",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -122,8 +117,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "outLeds", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "oneSecPulse", "Type" : "None", "Direction" : "I"},
 			{"Name" : "advios_switchs_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "advios_clkCount", "Type" : "None", "Direction" : "I"},
-			{"Name" : "advios_clk1s_state", "Type" : "None", "Direction" : "I"}]}]}
+			{"Name" : "advios_clkCount", "Type" : "None", "Direction" : "I"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -136,7 +130,6 @@ set ArgLastReadFirstWriteLatency {
 		oneSecPulse {Type IO LastRead -1 FirstWrite -1}
 		advios_switchs_V {Type I LastRead -1 FirstWrite -1}
 		advios_clkCount {Type IO LastRead -1 FirstWrite -1}
-		advios_clk1s_state {Type IO LastRead -1 FirstWrite -1}
 		advios_ssdm_thread_M_adviosThread {Type I LastRead -1 FirstWrite -1}
 		advios_ssdm_thread_M_clkDivide {Type I LastRead -1 FirstWrite -1}}
 	advios_clkDivide {
@@ -147,8 +140,7 @@ set ArgLastReadFirstWriteLatency {
 		outLeds {Type O LastRead -1 FirstWrite -1}
 		oneSecPulse {Type O LastRead -1 FirstWrite 1}
 		advios_switchs_V {Type I LastRead -1 FirstWrite -1}
-		advios_clkCount {Type IO LastRead 1 FirstWrite 1}
-		advios_clk1s_state {Type I LastRead -1 FirstWrite -1}}
+		advios_clkCount {Type IO LastRead 1 FirstWrite 1}}
 	advios_adviosThread {
 		clk {Type I LastRead -1 FirstWrite -1}
 		reset {Type I LastRead -1 FirstWrite -1}
@@ -157,8 +149,7 @@ set ArgLastReadFirstWriteLatency {
 		outLeds {Type O LastRead -1 FirstWrite 2}
 		oneSecPulse {Type I LastRead 2 FirstWrite -1}
 		advios_switchs_V {Type I LastRead -1 FirstWrite -1}
-		advios_clkCount {Type I LastRead -1 FirstWrite -1}
-		advios_clk1s_state {Type I LastRead -1 FirstWrite -1}}}
+		advios_clkCount {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

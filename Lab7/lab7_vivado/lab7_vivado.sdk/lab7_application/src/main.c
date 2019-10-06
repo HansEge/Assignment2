@@ -21,10 +21,10 @@ int main (void)
 	   xil_printf("\r\n");
 	   xil_printf("Enter ctrl-value\r\n");
 
-	   int userInput = inbyte();
-	   if ((userInput <0 )||(userInput > 7))
+	   int userInput = inbyte()-48;
+	   if ((userInput <0 )||(userInput > 15))
 		{
-		   xil_printf("Value must be between 0 and 7\r\n");
+		   xil_printf("Value must be between 0 and 15\r\n");
 		}
 	   else
 	   {

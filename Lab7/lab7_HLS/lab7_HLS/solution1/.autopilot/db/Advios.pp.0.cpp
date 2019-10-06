@@ -35363,13 +35363,13 @@ struct advios : ::sc_core::sc_module {
  sc_in<sc_uint<4> > inSwitch;
  sc_out<sc_uint<4> > outLeds;
 
+ // Signal to communicate between the two threads.
  sc_signal<bool> oneSecPulse;
 
  //Variables
  sc_uint<8> switchs;
 
- int clkCount;
- bool clk1s_state;
+ int clkCount; // Used in clock-divider-thread
 
  //Process Declaration
  void adviosThread();
@@ -35378,11 +35378,13 @@ struct advios : ::sc_core::sc_module {
 
  //Constructor
  typedef advios SC_CURRENT_USER_MODULE; advios( ::sc_core::sc_module_name ) {
-  clk1s_state = false;
   clkCount = 0;
   //Process Registration
+  // Clock-divider-thread, which outputs a high signal to oneSecPulse once every second.
   { ::sc_core::sc_cthread_process* clkDivide_handle = simcontext()->register_cthread_process("clkDivide", (void (::sc_core::sc_process_host::*)())(&SC_CURRENT_USER_MODULE::clkDivide), this ); sensitive.operator() ( clkDivide_handle, clk.pos() ); };
   watching(reset.delayed() == true);
+
+  // "Main"-thread for the module.
   { ::sc_core::sc_cthread_process* adviosThread_handle = simcontext()->register_cthread_process("adviosThread", (void (::sc_core::sc_process_host::*)())(&SC_CURRENT_USER_MODULE::adviosThread), this ); sensitive.operator() ( adviosThread_handle, clk.pos() ); };
  }
 };
@@ -35392,7 +35394,8 @@ void advios::clkDivide()
 {
  while (1)
  {
-  // Every 10*1000*1000 cycles, make a "true" pulse, and reset the counter.
+  // Clock = 100 MHZ.
+  // Every 100*1000*1000 cycles, make a "true" pulse, and reset the counter.
   clkCount++;
   if (clkCount >= 100000000)
   {
@@ -35403,6 +35406,7 @@ void advios::clkDivide()
   {
    oneSecPulse.write(false);
   }
+  // Wait to be triggered by clock again.
   wait();
  }
 }
@@ -35410,6 +35414,7 @@ void advios::clkDivide()
 void advios::adviosThread()
 {
 
+// Used in connecting the ctrl-port to the AXI4Lite-interface.
 #pragma HLS resource core=AXI4LiteS metadata="-bus_bundle slv0" variable=ctrl
 
  // Init counter
@@ -35432,7 +35437,7 @@ void advios::adviosThread()
    }
    else
    {
-
+    // If the one-sec-pulse is high (which it is for only 1 cycle pr. second), increment the counter.
     if (oneSecPulse == true)
     {
      //Increment counter, write to LEDs and wait for new clock.
@@ -35447,6 +35452,7 @@ void advios::adviosThread()
    outLeds.write((val_switches & val_ctrl));
   }
 
+  // Wait to be triggered by clock again.
   wait();
  }
 }

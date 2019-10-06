@@ -33,11 +33,11 @@ reg oneSecPulse_ap_vld;
 reg[31:0] advios_clkCount_o;
 reg advios_clkCount_o_ap_vld;
 
-wire   [0:0] tmp_1_fu_114_p2;
-reg   [0:0] tmp_1_reg_120;
+wire   [0:0] tmp_1_fu_112_p2;
+reg   [0:0] tmp_1_reg_118;
 (* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
 wire    ap_CS_fsm_state2;
-wire   [31:0] advios_clkCount_assi_fu_107_p2;
+wire   [31:0] advios_clkCount_assi_fu_105_p2;
 wire    ap_CS_fsm_state3;
 reg   [2:0] ap_NS_fsm;
 
@@ -56,22 +56,22 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        tmp_1_reg_120 <= tmp_1_fu_114_p2;
+        tmp_1_reg_118 <= tmp_1_fu_112_p2;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_120 == 1'd1))) begin
+    if (((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_118 == 1'd1))) begin
         advios_clkCount_o = 32'd0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        advios_clkCount_o = advios_clkCount_assi_fu_107_p2;
+        advios_clkCount_o = advios_clkCount_assi_fu_105_p2;
     end else begin
         advios_clkCount_o = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) | ((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_120 == 1'd1)))) begin
+    if (((1'b1 == ap_CS_fsm_state2) | ((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_118 == 1'd1)))) begin
         advios_clkCount_o_ap_vld = 1'b1;
     end else begin
         advios_clkCount_o_ap_vld = 1'b0;
@@ -79,9 +79,9 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_120 == 1'd1))) begin
+    if (((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_118 == 1'd1))) begin
         oneSecPulse = 1'd1;
-    end else if (((1'b1 == ap_CS_fsm_state2) & (tmp_1_fu_114_p2 == 1'd0))) begin
+    end else if (((1'b1 == ap_CS_fsm_state2) & (tmp_1_fu_112_p2 == 1'd0))) begin
         oneSecPulse = 1'd0;
     end else begin
         oneSecPulse = 'bx;
@@ -89,7 +89,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_120 == 1'd1)) | ((1'b1 == ap_CS_fsm_state2) & (tmp_1_fu_114_p2 == 1'd0)))) begin
+    if ((((1'b1 == ap_CS_fsm_state3) & (tmp_1_reg_118 == 1'd1)) | ((1'b1 == ap_CS_fsm_state2) & (tmp_1_fu_112_p2 == 1'd0)))) begin
         oneSecPulse_ap_vld = 1'b1;
     end else begin
         oneSecPulse_ap_vld = 1'b0;
@@ -110,12 +110,12 @@ always @ (*) begin
     endcase
 end
 
-assign advios_clkCount_assi_fu_107_p2 = (advios_clkCount_i + 32'd1);
+assign advios_clkCount_assi_fu_105_p2 = (advios_clkCount_i + 32'd1);
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
-assign tmp_1_fu_114_p2 = (($signed(advios_clkCount_assi_fu_107_p2) > $signed(32'd99999999)) ? 1'b1 : 1'b0);
+assign tmp_1_fu_112_p2 = (($signed(advios_clkCount_assi_fu_105_p2) > $signed(32'd99999999)) ? 1'b1 : 1'b0);
 
 endmodule //advios_clkDivide

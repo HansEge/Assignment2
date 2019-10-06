@@ -53,8 +53,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "outLeds", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "oneSecPulse", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "advios_switchs_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "advios_clkCount", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "advios_clk1s_state", "Type" : "None", "Direction" : "I"}]}]}
+			{"Name" : "advios_clkCount", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -66,8 +65,7 @@ set ArgLastReadFirstWriteLatency {
 		outLeds {Type O LastRead -1 FirstWrite -1}
 		oneSecPulse {Type O LastRead -1 FirstWrite 1}
 		advios_switchs_V {Type I LastRead -1 FirstWrite -1}
-		advios_clkCount {Type IO LastRead 1 FirstWrite 1}
-		advios_clk1s_state {Type I LastRead -1 FirstWrite -1}}}
+		advios_clkCount {Type IO LastRead 1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 

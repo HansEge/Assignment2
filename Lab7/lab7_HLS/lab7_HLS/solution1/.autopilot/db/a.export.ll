@@ -2,9 +2,8 @@
 target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
 target triple = "i686-pc-mingw32"
 
-@ssdm_ins_advios_0_0_9 = constant i4 0
-@ssdm_ins_advios_0_0_8 = constant i32 0
-@ssdm_ins_advios_0_0_7 = constant i1 false
+@ssdm_ins_advios_0_0_8 = constant i4 0
+@ssdm_ins_advios_0_0_7 = constant i32 0
 @ssdm_ins_advios_0_0_6 = constant i1 false
 @ssdm_ins_advios_0_0_5 = constant i1 false
 @ssdm_ins_advios_0_0_4 = constant i4 0
@@ -23,9 +22,9 @@ target triple = "i686-pc-mingw32"
 @p_str4 = private unnamed_addr constant [13 x i8] c"\22sc_uint<4>\22\00", align 1
 @p_str3 = private unnamed_addr constant [6 x i8] c"reset\00", align 1
 @p_str2 = private unnamed_addr constant [4 x i8] c"clk\00", align 1
-@p_str18 = private unnamed_addr constant [17 x i8] c"-bus_bundle slv0\00", align 1
-@p_str17 = private unnamed_addr constant [10 x i8] c"AXI4LiteS\00", align 1
-@p_str16 = private unnamed_addr constant [13 x i8] c"adviosThread\00", align 1
+@p_str17 = private unnamed_addr constant [17 x i8] c"-bus_bundle slv0\00", align 1
+@p_str16 = private unnamed_addr constant [10 x i8] c"AXI4LiteS\00", align 1
+@p_str15 = private unnamed_addr constant [13 x i8] c"adviosThread\00", align 1
 @p_str12 = private unnamed_addr constant [12 x i8] c"oneSecPulse\00", align 1
 @p_str10 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 @p_str1 = private unnamed_addr constant [7 x i8] c"\22bool\22\00", align 1
@@ -35,8 +34,8 @@ declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
-define void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state) {
-  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
+define void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount) {
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str16, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str17)
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
   call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
@@ -45,7 +44,6 @@ define void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch,
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
   call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
@@ -80,7 +78,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:                  ; preds = %3, %2
   br label %1
 }
 
-define void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state) {
+define void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount) {
   %v_V = alloca i4
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
@@ -90,17 +88,16 @@ define void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwit
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
   call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
-  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [13 x i8]* @p_str16) nounwind
+  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [13 x i8]* @p_str15) nounwind
   %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9)
   call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind
   %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind
-  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str16, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str17)
   %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
   %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp_3)
   store i4 0, i4* %v_V
@@ -144,8 +141,8 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:                  ; preds = %6, %5, %4, %3
   br label %1
 }
 
-define weak void @"advios::advios"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state) {
-  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
+define weak void @"advios::advios"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount) {
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str16, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str17)
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !67
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !71
   call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !75
@@ -154,23 +151,22 @@ define weak void @"advios::advios"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitc
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %oneSecPulse), !map !87
   call void (...)* @_ssdm_op_SpecBitsMap(i8* %advios_switchs_V), !map !91
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %advios_clkCount), !map !95
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk1s_state), !map !99
   call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
   %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_adviosThread, align 1
   br i1 %advios_ssdm_threa, label %1, label %2
 
 ; <label>:1                                       ; preds = %0
-  call void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
+  call void @"advios::adviosThread"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount)
   br label %UnifiedUnreachableBlock
 
 ; <label>:2                                       ; preds = %0
-  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [13 x i8]* @p_str16) nounwind
-  call void (...)* @_ssdm_op_SpecSensitive([13 x i8]* @p_str16, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
+  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [13 x i8]* @p_str15) nounwind
+  call void (...)* @_ssdm_op_SpecSensitive([13 x i8]* @p_str15, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
   %advios_ssdm_threa_1 = load i1* @advios_ssdm_thread_M_clkDivide, align 1
   br i1 %advios_ssdm_threa_1, label %3, label %4
 
 ; <label>:3                                       ; preds = %2
-  call void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount, i1* %advios_clk1s_state)
+  call void @"advios::clkDivide"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %oneSecPulse, i8* %advios_switchs_V, i32* %advios_clkCount)
   br label %UnifiedUnreachableBlock
 
 ; <label>:4                                       ; preds = %2
@@ -183,7 +179,6 @@ define weak void @"advios::advios"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitc
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
   call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
   call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [12 x i8]* @p_str12, i32 1, i32 0, i1* %oneSecPulse) nounwind
-  call void @_ssdm_op_Write.ap_auto.i1P(i1* %advios_clk1s_state, i1 false)
   call void @_ssdm_op_Write.ap_auto.i32P(i32* %advios_clkCount, i32 0)
   ret void
 
@@ -206,12 +201,6 @@ entry:
 define weak void @_ssdm_op_Write.ap_auto.i32P(i32*, i32) {
 entry:
   store i32 %1, i32* %0
-  ret void
-}
-
-define weak void @_ssdm_op_Write.ap_auto.i1P(i1*, i1) {
-entry:
-  store i1 %1, i1* %0
   ret void
 }
 
@@ -408,7 +397,3 @@ declare void @_GLOBAL__I_a() nounwind
 !96 = metadata !{i32 0, i32 31, metadata !97}
 !97 = metadata !{metadata !98}
 !98 = metadata !{metadata !"advios.clkCount", metadata !55, metadata !"int", i32 0, i32 31}
-!99 = metadata !{metadata !100}
-!100 = metadata !{i32 0, i32 0, metadata !101}
-!101 = metadata !{metadata !102}
-!102 = metadata !{metadata !"advios.clk1s_state", metadata !55, metadata !"bool", i32 0, i32 0}

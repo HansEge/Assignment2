@@ -43,38 +43,38 @@ advios_adviosThread::advios_adviosThread(sc_module_name name) : sc_module(name),
     SC_METHOD(thread_ap_CS_fsm_state4);
     sensitive << ( ap_CS_fsm );
 
-    SC_METHOD(thread_cnt_V_fu_134_p2);
-    sensitive << ( v_V_fu_76 );
+    SC_METHOD(thread_cnt_V_fu_140_p2);
+    sensitive << ( v_V_fu_82 );
 
     SC_METHOD(thread_outLeds);
-    sensitive << ( tmp_fu_115_p2 );
-    sensitive << ( tmp_reg_153 );
+    sensitive << ( tmp_fu_121_p2 );
+    sensitive << ( tmp_reg_159 );
     sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( tmp_2_reg_157 );
-    sensitive << ( tmp_1_reg_161 );
-    sensitive << ( v_V_fu_76 );
-    sensitive << ( cnt_V_fu_134_p2 );
+    sensitive << ( tmp_2_reg_163 );
+    sensitive << ( tmp_1_reg_167 );
+    sensitive << ( v_V_fu_82 );
+    sensitive << ( cnt_V_fu_140_p2 );
     sensitive << ( ap_CS_fsm_state4 );
-    sensitive << ( v_V_1_fu_121_p2 );
+    sensitive << ( v_V_1_fu_127_p2 );
 
     SC_METHOD(thread_outLeds_ap_vld);
-    sensitive << ( tmp_fu_115_p2 );
-    sensitive << ( tmp_reg_153 );
+    sensitive << ( tmp_fu_121_p2 );
+    sensitive << ( tmp_reg_159 );
     sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( tmp_2_reg_157 );
-    sensitive << ( tmp_1_reg_161 );
+    sensitive << ( tmp_2_reg_163 );
+    sensitive << ( tmp_1_reg_167 );
     sensitive << ( ap_CS_fsm_state4 );
 
-    SC_METHOD(thread_tmp_2_fu_128_p2);
+    SC_METHOD(thread_tmp_2_fu_134_p2);
     sensitive << ( inSwitch );
-    sensitive << ( tmp_fu_115_p2 );
+    sensitive << ( tmp_fu_121_p2 );
     sensitive << ( ap_CS_fsm_state3 );
 
-    SC_METHOD(thread_tmp_fu_115_p2);
+    SC_METHOD(thread_tmp_fu_121_p2);
     sensitive << ( ctrl );
     sensitive << ( ap_CS_fsm_state3 );
 
-    SC_METHOD(thread_v_V_1_fu_121_p2);
+    SC_METHOD(thread_v_V_1_fu_127_p2);
     sensitive << ( ctrl );
     sensitive << ( inSwitch );
 
@@ -99,18 +99,18 @@ advios_adviosThread::advios_adviosThread(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, oneSecPulse, "(port)oneSecPulse");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
-    sc_trace(mVcdFile, tmp_fu_115_p2, "tmp_fu_115_p2");
-    sc_trace(mVcdFile, tmp_reg_153, "tmp_reg_153");
+    sc_trace(mVcdFile, tmp_fu_121_p2, "tmp_fu_121_p2");
+    sc_trace(mVcdFile, tmp_reg_159, "tmp_reg_159");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
-    sc_trace(mVcdFile, tmp_2_fu_128_p2, "tmp_2_fu_128_p2");
-    sc_trace(mVcdFile, tmp_2_reg_157, "tmp_2_reg_157");
-    sc_trace(mVcdFile, tmp_1_reg_161, "tmp_1_reg_161");
-    sc_trace(mVcdFile, v_V_fu_76, "v_V_fu_76");
+    sc_trace(mVcdFile, tmp_2_fu_134_p2, "tmp_2_fu_134_p2");
+    sc_trace(mVcdFile, tmp_2_reg_163, "tmp_2_reg_163");
+    sc_trace(mVcdFile, tmp_1_reg_167, "tmp_1_reg_167");
+    sc_trace(mVcdFile, v_V_fu_82, "v_V_fu_82");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
-    sc_trace(mVcdFile, cnt_V_fu_134_p2, "cnt_V_fu_134_p2");
+    sc_trace(mVcdFile, cnt_V_fu_140_p2, "cnt_V_fu_140_p2");
     sc_trace(mVcdFile, ap_CS_fsm_state4, "ap_CS_fsm_state4");
-    sc_trace(mVcdFile, v_V_1_fu_121_p2, "v_V_1_fu_121_p2");
+    sc_trace(mVcdFile, v_V_1_fu_127_p2, "v_V_1_fu_127_p2");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
@@ -130,24 +130,24 @@ void advios_adviosThread::thread_ap_clk_no_reset_() {
         ap_CS_fsm = ap_NS_fsm.read();
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
-         esl_seteq<1,1,1>(tmp_reg_153.read(), ap_const_lv1_1) && 
-         esl_seteq<1,1,1>(tmp_2_reg_157.read(), ap_const_lv1_0) && 
-         esl_seteq<1,1,1>(ap_const_lv1_1, tmp_1_reg_161.read()))) {
-        v_V_fu_76 = cnt_V_fu_134_p2.read();
+         esl_seteq<1,1,1>(tmp_reg_159.read(), ap_const_lv1_1) && 
+         esl_seteq<1,1,1>(tmp_2_reg_163.read(), ap_const_lv1_0) && 
+         esl_seteq<1,1,1>(ap_const_lv1_1, tmp_1_reg_167.read()))) {
+        v_V_fu_82 = cnt_V_fu_140_p2.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) || 
                 (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
-                 esl_seteq<1,1,1>(tmp_reg_153.read(), ap_const_lv1_1) && 
-                 esl_seteq<1,1,1>(tmp_2_reg_157.read(), ap_const_lv1_1)))) {
-        v_V_fu_76 = ap_const_lv4_0;
+                 esl_seteq<1,1,1>(tmp_reg_159.read(), ap_const_lv1_1) && 
+                 esl_seteq<1,1,1>(tmp_2_reg_163.read(), ap_const_lv1_1)))) {
+        v_V_fu_82 = ap_const_lv4_0;
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(tmp_fu_115_p2.read(), ap_const_lv1_1) && esl_seteq<1,1,1>(tmp_2_fu_128_p2.read(), ap_const_lv1_0))) {
-        tmp_1_reg_161 =  (sc_lv<1>) (oneSecPulse.read());
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(tmp_fu_121_p2.read(), ap_const_lv1_1) && esl_seteq<1,1,1>(tmp_2_fu_134_p2.read(), ap_const_lv1_0))) {
+        tmp_1_reg_167 =  (sc_lv<1>) (oneSecPulse.read());
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(tmp_fu_115_p2.read(), ap_const_lv1_1))) {
-        tmp_2_reg_157 = tmp_2_fu_128_p2.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && esl_seteq<1,1,1>(tmp_fu_121_p2.read(), ap_const_lv1_1))) {
+        tmp_2_reg_163 = tmp_2_fu_134_p2.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
-        tmp_reg_153 = tmp_fu_115_p2.read();
+        tmp_reg_159 = tmp_fu_121_p2.read();
     }
 }
 
@@ -163,26 +163,26 @@ void advios_adviosThread::thread_ap_CS_fsm_state4() {
     ap_CS_fsm_state4 = ap_CS_fsm.read()[3];
 }
 
-void advios_adviosThread::thread_cnt_V_fu_134_p2() {
-    cnt_V_fu_134_p2 = (!v_V_fu_76.read().is_01() || !ap_const_lv4_1.is_01())? sc_lv<4>(): (sc_biguint<4>(v_V_fu_76.read()) + sc_biguint<4>(ap_const_lv4_1));
+void advios_adviosThread::thread_cnt_V_fu_140_p2() {
+    cnt_V_fu_140_p2 = (!v_V_fu_82.read().is_01() || !ap_const_lv4_1.is_01())? sc_lv<4>(): (sc_biguint<4>(v_V_fu_82.read()) + sc_biguint<4>(ap_const_lv4_1));
 }
 
 void advios_adviosThread::thread_outLeds() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
-         esl_seteq<1,1,1>(tmp_reg_153.read(), ap_const_lv1_1) && 
-         esl_seteq<1,1,1>(tmp_2_reg_157.read(), ap_const_lv1_1))) {
+         esl_seteq<1,1,1>(tmp_reg_159.read(), ap_const_lv1_1) && 
+         esl_seteq<1,1,1>(tmp_2_reg_163.read(), ap_const_lv1_1))) {
         outLeds = ap_const_lv4_0;
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
-                esl_seteq<1,1,1>(tmp_reg_153.read(), ap_const_lv1_1) && 
-                esl_seteq<1,1,1>(tmp_2_reg_157.read(), ap_const_lv1_0) && 
-                esl_seteq<1,1,1>(ap_const_lv1_1, tmp_1_reg_161.read()))) {
-        outLeds = cnt_V_fu_134_p2.read();
+                esl_seteq<1,1,1>(tmp_reg_159.read(), ap_const_lv1_1) && 
+                esl_seteq<1,1,1>(tmp_2_reg_163.read(), ap_const_lv1_0) && 
+                esl_seteq<1,1,1>(ap_const_lv1_1, tmp_1_reg_167.read()))) {
+        outLeds = cnt_V_fu_140_p2.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
-                esl_seteq<1,1,1>(tmp_fu_115_p2.read(), ap_const_lv1_1))) {
-        outLeds = v_V_fu_76.read();
+                esl_seteq<1,1,1>(tmp_fu_121_p2.read(), ap_const_lv1_1))) {
+        outLeds = v_V_fu_82.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
-                esl_seteq<1,1,1>(tmp_fu_115_p2.read(), ap_const_lv1_0))) {
-        outLeds = v_V_1_fu_121_p2.read();
+                esl_seteq<1,1,1>(tmp_fu_121_p2.read(), ap_const_lv1_0))) {
+        outLeds = v_V_1_fu_127_p2.read();
     } else {
         outLeds = "XXXX";
     }
@@ -190,32 +190,32 @@ void advios_adviosThread::thread_outLeds() {
 
 void advios_adviosThread::thread_outLeds_ap_vld() {
     if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
-          esl_seteq<1,1,1>(tmp_fu_115_p2.read(), ap_const_lv1_1)) || 
+          esl_seteq<1,1,1>(tmp_fu_121_p2.read(), ap_const_lv1_1)) || 
          (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
-          esl_seteq<1,1,1>(tmp_reg_153.read(), ap_const_lv1_1) && 
-          esl_seteq<1,1,1>(tmp_2_reg_157.read(), ap_const_lv1_0) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, tmp_1_reg_161.read())) || 
+          esl_seteq<1,1,1>(tmp_reg_159.read(), ap_const_lv1_1) && 
+          esl_seteq<1,1,1>(tmp_2_reg_163.read(), ap_const_lv1_0) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, tmp_1_reg_167.read())) || 
          (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
-          esl_seteq<1,1,1>(tmp_reg_153.read(), ap_const_lv1_1) && 
-          esl_seteq<1,1,1>(tmp_2_reg_157.read(), ap_const_lv1_1)) || 
+          esl_seteq<1,1,1>(tmp_reg_159.read(), ap_const_lv1_1) && 
+          esl_seteq<1,1,1>(tmp_2_reg_163.read(), ap_const_lv1_1)) || 
          (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
-          esl_seteq<1,1,1>(tmp_fu_115_p2.read(), ap_const_lv1_0)))) {
+          esl_seteq<1,1,1>(tmp_fu_121_p2.read(), ap_const_lv1_0)))) {
         outLeds_ap_vld = ap_const_logic_1;
     } else {
         outLeds_ap_vld = ap_const_logic_0;
     }
 }
 
-void advios_adviosThread::thread_tmp_2_fu_128_p2() {
-    tmp_2_fu_128_p2 = (!inSwitch.read().is_01() || !ap_const_lv4_8.is_01())? sc_lv<1>(): sc_lv<1>(inSwitch.read() == ap_const_lv4_8);
+void advios_adviosThread::thread_tmp_2_fu_134_p2() {
+    tmp_2_fu_134_p2 = (!inSwitch.read().is_01() || !ap_const_lv4_8.is_01())? sc_lv<1>(): sc_lv<1>(inSwitch.read() == ap_const_lv4_8);
 }
 
-void advios_adviosThread::thread_tmp_fu_115_p2() {
-    tmp_fu_115_p2 = (!ctrl.read().is_01() || !ap_const_lv4_0.is_01())? sc_lv<1>(): sc_lv<1>(ctrl.read() == ap_const_lv4_0);
+void advios_adviosThread::thread_tmp_fu_121_p2() {
+    tmp_fu_121_p2 = (!ctrl.read().is_01() || !ap_const_lv4_0.is_01())? sc_lv<1>(): sc_lv<1>(ctrl.read() == ap_const_lv4_0);
 }
 
-void advios_adviosThread::thread_v_V_1_fu_121_p2() {
-    v_V_1_fu_121_p2 = (inSwitch.read() & ctrl.read());
+void advios_adviosThread::thread_v_V_1_fu_127_p2() {
+    v_V_1_fu_127_p2 = (inSwitch.read() & ctrl.read());
 }
 
 void advios_adviosThread::thread_ap_NS_fsm() {

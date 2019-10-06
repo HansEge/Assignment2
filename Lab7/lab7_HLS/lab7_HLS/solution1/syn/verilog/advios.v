@@ -26,64 +26,64 @@ output  [3:0] outLeds;
 
 reg[3:0] outLeds;
 
-wire   [0:0] advios_ssdm_threa_load_fu_144_p1;
+wire   [0:0] advios_ssdm_threa_load_fu_126_p1;
 wire   [1:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire    grp_advios_clkDivide_fu_100_oneSecPulse;
-wire    grp_advios_clkDivide_fu_100_oneSecPulse_ap_vld;
-wire   [31:0] grp_advios_clkDivide_fu_100_advios_clkCount_o;
-wire    grp_advios_clkDivide_fu_100_advios_clkCount_o_ap_vld;
-wire   [3:0] grp_advios_adviosThread_fu_122_outLeds;
-wire    grp_advios_adviosThread_fu_122_outLeds_ap_vld;
-wire    grp_advios_adviosThread_fu_122_oneSecPulse;
+wire    grp_advios_clkDivide_fu_86_oneSecPulse;
+wire    grp_advios_clkDivide_fu_86_oneSecPulse_ap_vld;
+wire   [31:0] grp_advios_clkDivide_fu_86_advios_clkCount_o;
+wire    grp_advios_clkDivide_fu_86_advios_clkCount_o_ap_vld;
+wire   [3:0] grp_advios_adviosThread_fu_106_outLeds;
+wire    grp_advios_adviosThread_fu_106_outLeds_ap_vld;
+wire    grp_advios_adviosThread_fu_106_oneSecPulse;
 wire    ap_CS_fsm_state2;
 reg   [0:0] oneSecPulse;
 reg   [31:0] advios_clkCount;
-wire   [0:0] advios_ssdm_threa_1_load_fu_148_p1;
+wire   [0:0] advios_ssdm_threa_1_load_fu_130_p1;
 
-advios_clkDivide grp_advios_clkDivide_fu_100(
+advios_clkDivide grp_advios_clkDivide_fu_86(
     .ap_clk(clk),
     .ap_rst(reset),
-    .oneSecPulse(grp_advios_clkDivide_fu_100_oneSecPulse),
-    .oneSecPulse_ap_vld(grp_advios_clkDivide_fu_100_oneSecPulse_ap_vld),
+    .oneSecPulse(grp_advios_clkDivide_fu_86_oneSecPulse),
+    .oneSecPulse_ap_vld(grp_advios_clkDivide_fu_86_oneSecPulse_ap_vld),
     .advios_clkCount_i(advios_clkCount),
-    .advios_clkCount_o(grp_advios_clkDivide_fu_100_advios_clkCount_o),
-    .advios_clkCount_o_ap_vld(grp_advios_clkDivide_fu_100_advios_clkCount_o_ap_vld)
+    .advios_clkCount_o(grp_advios_clkDivide_fu_86_advios_clkCount_o),
+    .advios_clkCount_o_ap_vld(grp_advios_clkDivide_fu_86_advios_clkCount_o_ap_vld)
 );
 
-advios_adviosThread grp_advios_adviosThread_fu_122(
+advios_adviosThread grp_advios_adviosThread_fu_106(
     .ap_clk(clk),
     .ap_rst(reset),
     .ctrl(ctrl),
     .inSwitch(inSwitch),
-    .outLeds(grp_advios_adviosThread_fu_122_outLeds),
-    .outLeds_ap_vld(grp_advios_adviosThread_fu_122_outLeds_ap_vld),
-    .oneSecPulse(grp_advios_adviosThread_fu_122_oneSecPulse)
+    .outLeds(grp_advios_adviosThread_fu_106_outLeds),
+    .outLeds_ap_vld(grp_advios_adviosThread_fu_106_outLeds_ap_vld),
+    .oneSecPulse(grp_advios_adviosThread_fu_106_oneSecPulse)
 );
 
 always @ (posedge clk) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (1'd0 == advios_ssdm_threa_load_fu_144_p1) & (1'd0 == advios_ssdm_threa_1_load_fu_148_p1))) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (1'd0 == advios_ssdm_threa_load_fu_126_p1) & (1'd0 == advios_ssdm_threa_1_load_fu_130_p1))) begin
         advios_clkCount <= 32'd0;
-    end else if ((1'b1 == grp_advios_clkDivide_fu_100_advios_clkCount_o_ap_vld)) begin
-        advios_clkCount <= grp_advios_clkDivide_fu_100_advios_clkCount_o;
+    end else if ((1'b1 == grp_advios_clkDivide_fu_86_advios_clkCount_o_ap_vld)) begin
+        advios_clkCount <= grp_advios_clkDivide_fu_86_advios_clkCount_o;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_advios_clkDivide_fu_100_oneSecPulse_ap_vld)) begin
-        oneSecPulse <= grp_advios_clkDivide_fu_100_oneSecPulse;
+    if ((1'b1 == grp_advios_clkDivide_fu_86_oneSecPulse_ap_vld)) begin
+        oneSecPulse <= grp_advios_clkDivide_fu_86_oneSecPulse;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_advios_adviosThread_fu_122_outLeds_ap_vld)) begin
-        outLeds <= grp_advios_adviosThread_fu_122_outLeds;
+    if ((1'b1 == grp_advios_adviosThread_fu_106_outLeds_ap_vld)) begin
+        outLeds <= grp_advios_adviosThread_fu_106_outLeds;
     end
 end
 
-assign advios_ssdm_threa_1_load_fu_148_p1 = 1'd0;
+assign advios_ssdm_threa_1_load_fu_130_p1 = 1'd0;
 
-assign advios_ssdm_threa_load_fu_144_p1 = 1'd0;
+assign advios_ssdm_threa_load_fu_126_p1 = 1'd0;
 
 assign ap_CS_fsm = 2'd0;
 
@@ -91,6 +91,6 @@ assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
-assign grp_advios_adviosThread_fu_122_oneSecPulse = oneSecPulse;
+assign grp_advios_adviosThread_fu_106_oneSecPulse = oneSecPulse;
 
 endmodule //advios

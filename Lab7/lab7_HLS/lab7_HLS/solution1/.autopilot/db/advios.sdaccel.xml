@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'advios'" level="0">
-<item name = "Date">Fri Oct  4 12:50:53 2019
+<item name = "Date">Sun Oct  6 13:25:10 2019
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">lab7_HLS</item>
@@ -29,8 +29,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_advios_clkDivide_fu_100">advios_clkDivide, 3, 3, 3, 3, none</column>
-<column name="grp_advios_adviosThread_fu_122">advios_adviosThread, 4, 4, 4, 4, none</column>
+<column name="grp_advios_clkDivide_fu_86">advios_clkDivide, 3, 3, 3, 3, none</column>
+<column name="grp_advios_adviosThread_fu_106">advios_adviosThread, 4, 4, 4, 4, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -61,8 +61,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_advios_adviosThread_fu_122">advios_adviosThread, 0, 0, 28, 80</column>
-<column name="grp_advios_clkDivide_fu_100">advios_clkDivide, 0, 0, 105, 98</column>
+<column name="grp_advios_adviosThread_fu_106">advios_adviosThread, 0, 0, 28, 80</column>
+<column name="grp_advios_clkDivide_fu_86">advios_clkDivide, 0, 0, 105, 98</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -113,7 +113,7 @@
 <item name = "Max Delay">6.16</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="../Assignment_lab7/Assignment_lab7/Advios.h:32">call, 6.16, 6.16, -, -, -, -, -, -, -, -, -, advios::clkDivide, -</column>
+<column name="../Assignment_lab7/Assignment_lab7/Advios.h:31">call, 6.16, 6.16, -, -, -, -, -, -, -, -, -, advios::clkDivide, -</column>
 </table>
 </item>
 </section>

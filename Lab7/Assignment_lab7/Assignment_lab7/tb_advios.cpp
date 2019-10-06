@@ -1,9 +1,11 @@
 #include <systemc.h>
 #include <stdio.h>
 
+// if running RTL-simulation use generated RTL-wrapper
 #ifdef __RTL_SIMULATION__
 	#include "advios_rtl_wrapper.h"
 	#define advios advios_rtl_wrapper
+// if not, the c-simulation is being run, and the c-version is used instead.
 #else
 	#include "advios.h"
 #endif
@@ -21,6 +23,7 @@ int sc_main (int argc , char *argv[])
 
 	sc_trace_file *tracefile;
 
+	// Test signals
 	sc_signal<bool> s_reset;
 	sc_signal<sc_uint<NUM_BITS> > s_switch;
 	sc_signal<sc_uint<NUM_BITS> > s_ctrl;
@@ -38,44 +41,41 @@ int sc_main (int argc , char *argv[])
 	// Set resolution of trace file to be in 10 US
 	tracefile->set_time_unit(1, SC_NS);
 
+	// Trace signals
 	sc_trace(tracefile, s_clk,    "clock");
-
 	sc_trace(tracefile, s_reset,  "reset");
-
 	sc_trace(tracefile, s_ctrl,   "ctrl");
 	sc_trace(tracefile, s_leds,   "leds");
-
 	sc_trace(tracefile, s_switch, "switch");
 
-	// Connect the DUT
+	// Connect the DUT to the signals
 	U_Advios.clk(s_clk);
 	U_Advios.reset(s_reset);
-
 	U_Advios.ctrl(s_ctrl);
 	U_Advios.outLeds(s_leds);
 	U_Advios.inSwitch(s_switch);
 
-	// Drive stimuli from dat* ports
-	// Capture results at out* ports
+	// Connect the driver to the signals
 	U_advios_driver.clk(s_clk);
 	U_advios_driver.reset(s_reset);
-
 	U_advios_driver.inLeds(s_leds);
 	U_advios_driver.outSwitch(s_switch);
 	U_advios_driver.ctrl(s_ctrl);
 
-	// Sim for 200
+	// Simulate for 200
 	int end_time = 200;
 	std::cout << "INFO: Simulating" << std::endl;
 	// start simulation
 	sc_start(end_time, SC_NS);
 
+	// Check whether test passed or not
 	if (U_advios_driver.retval == 0) {
 		printf("Test passed !\n");
 	} else {
 		printf("Test failed !!!\n");
 	}
 
+	// Close trace file.
 	sc_close_vcd_trace_file(tracefile);
 	std::cout << TRACE_FILE_NAME << ".vcd" << std::endl;
 

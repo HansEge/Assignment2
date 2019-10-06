@@ -32,24 +32,24 @@ architecture behav of advios is
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_boolean_1 : BOOLEAN := true;
 
-    signal advios_ssdm_threa_load_fu_134_p1 : STD_LOGIC_VECTOR (0 downto 0);
+    signal advios_ssdm_threa_load_fu_126_p1 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0);
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal grp_advios_clkDivide_fu_90_oneSecPulse : STD_LOGIC;
-    signal grp_advios_clkDivide_fu_90_oneSecPulse_ap_vld : STD_LOGIC;
-    signal grp_advios_clkDivide_fu_90_advios_clkCount_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_advios_clkDivide_fu_90_advios_clkCount_o_ap_vld : STD_LOGIC;
-    signal grp_advios_adviosThread_fu_112_outLeds : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_advios_adviosThread_fu_112_outLeds_ap_vld : STD_LOGIC;
-    signal grp_advios_adviosThread_fu_112_oneSecPulse : STD_LOGIC;
+    signal grp_advios_clkDivide_fu_86_oneSecPulse : STD_LOGIC;
+    signal grp_advios_clkDivide_fu_86_oneSecPulse_ap_vld : STD_LOGIC;
+    signal grp_advios_clkDivide_fu_86_advios_clkCount_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_advios_clkDivide_fu_86_advios_clkCount_o_ap_vld : STD_LOGIC;
+    signal grp_advios_adviosThread_fu_106_outLeds : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_advios_adviosThread_fu_106_outLeds_ap_vld : STD_LOGIC;
+    signal grp_advios_adviosThread_fu_106_oneSecPulse : STD_LOGIC;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal oneSecPulse : STD_LOGIC_VECTOR (0 downto 0);
     signal advios_clkCount : STD_LOGIC_VECTOR (31 downto 0);
-    signal advios_ssdm_threa_1_load_fu_138_p1 : STD_LOGIC_VECTOR (0 downto 0);
+    signal advios_ssdm_threa_1_load_fu_130_p1 : STD_LOGIC_VECTOR (0 downto 0);
 
     component advios_clkDivide IS
     port (
@@ -77,25 +77,25 @@ architecture behav of advios is
 
 
 begin
-    grp_advios_clkDivide_fu_90 : component advios_clkDivide
+    grp_advios_clkDivide_fu_86 : component advios_clkDivide
     port map (
         ap_clk => clk,
         ap_rst => reset,
-        oneSecPulse => grp_advios_clkDivide_fu_90_oneSecPulse,
-        oneSecPulse_ap_vld => grp_advios_clkDivide_fu_90_oneSecPulse_ap_vld,
+        oneSecPulse => grp_advios_clkDivide_fu_86_oneSecPulse,
+        oneSecPulse_ap_vld => grp_advios_clkDivide_fu_86_oneSecPulse_ap_vld,
         advios_clkCount_i => advios_clkCount,
-        advios_clkCount_o => grp_advios_clkDivide_fu_90_advios_clkCount_o,
-        advios_clkCount_o_ap_vld => grp_advios_clkDivide_fu_90_advios_clkCount_o_ap_vld);
+        advios_clkCount_o => grp_advios_clkDivide_fu_86_advios_clkCount_o,
+        advios_clkCount_o_ap_vld => grp_advios_clkDivide_fu_86_advios_clkCount_o_ap_vld);
 
-    grp_advios_adviosThread_fu_112 : component advios_adviosThread
+    grp_advios_adviosThread_fu_106 : component advios_adviosThread
     port map (
         ap_clk => clk,
         ap_rst => reset,
         ctrl => ctrl,
         inSwitch => inSwitch,
-        outLeds => grp_advios_adviosThread_fu_112_outLeds,
-        outLeds_ap_vld => grp_advios_adviosThread_fu_112_outLeds_ap_vld,
-        oneSecPulse => grp_advios_adviosThread_fu_112_oneSecPulse);
+        outLeds => grp_advios_adviosThread_fu_106_outLeds,
+        outLeds_ap_vld => grp_advios_adviosThread_fu_106_outLeds_ap_vld,
+        oneSecPulse => grp_advios_adviosThread_fu_106_oneSecPulse);
 
 
 
@@ -104,10 +104,10 @@ begin
     advios_clkCount_assign_proc : process(clk)
     begin
         if (clk'event and clk =  '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_const_lv1_0 = advios_ssdm_threa_load_fu_134_p1) and (ap_const_lv1_0 = advios_ssdm_threa_1_load_fu_138_p1))) then 
+            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_const_lv1_0 = advios_ssdm_threa_load_fu_126_p1) and (ap_const_lv1_0 = advios_ssdm_threa_1_load_fu_130_p1))) then 
                 advios_clkCount <= ap_const_lv32_0;
-            elsif ((ap_const_logic_1 = grp_advios_clkDivide_fu_90_advios_clkCount_o_ap_vld)) then 
-                advios_clkCount <= grp_advios_clkDivide_fu_90_advios_clkCount_o;
+            elsif ((ap_const_logic_1 = grp_advios_clkDivide_fu_86_advios_clkCount_o_ap_vld)) then 
+                advios_clkCount <= grp_advios_clkDivide_fu_86_advios_clkCount_o;
             end if; 
         end if;
     end process;
@@ -116,8 +116,8 @@ begin
     oneSecPulse_assign_proc : process(clk)
     begin
         if (clk'event and clk =  '1') then
-            if ((ap_const_logic_1 = grp_advios_clkDivide_fu_90_oneSecPulse_ap_vld)) then 
-                oneSecPulse <= (0=>grp_advios_clkDivide_fu_90_oneSecPulse, others=>'-');
+            if ((ap_const_logic_1 = grp_advios_clkDivide_fu_86_oneSecPulse_ap_vld)) then 
+                oneSecPulse <= (0=>grp_advios_clkDivide_fu_86_oneSecPulse, others=>'-');
             end if; 
         end if;
     end process;
@@ -126,16 +126,16 @@ begin
     outLeds_assign_proc : process(clk)
     begin
         if (clk'event and clk =  '1') then
-            if ((ap_const_logic_1 = grp_advios_adviosThread_fu_112_outLeds_ap_vld)) then 
-                outLeds <= grp_advios_adviosThread_fu_112_outLeds;
+            if ((ap_const_logic_1 = grp_advios_adviosThread_fu_106_outLeds_ap_vld)) then 
+                outLeds <= grp_advios_adviosThread_fu_106_outLeds;
             end if; 
         end if;
     end process;
 
-    advios_ssdm_threa_1_load_fu_138_p1 <= ap_const_lv1_0;
-    advios_ssdm_threa_load_fu_134_p1 <= ap_const_lv1_0;
+    advios_ssdm_threa_1_load_fu_130_p1 <= ap_const_lv1_0;
+    advios_ssdm_threa_load_fu_126_p1 <= ap_const_lv1_0;
     ap_CS_fsm <= ap_const_lv2_0;
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
-    grp_advios_adviosThread_fu_112_oneSecPulse <= oneSecPulse(0);
+    grp_advios_adviosThread_fu_106_oneSecPulse <= oneSecPulse(0);
 end behav;
