@@ -58,6 +58,8 @@ int main (void)
 		xil_printf("Timer init() failed\r\n");
 	return XST_FAILURE;
 	}
+	XScuTimer_LoadTimer(TimerInstancePtr,ONE_SECOND); 	// Setup timer to countdown from ONE_SECOND
+
 
 	// Load timer with delay in multiple of ONE_SECOND
 	//XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
@@ -158,26 +160,31 @@ void execute_command_3()
 
 	// Multiply matrices in SW.
 	xil_printf("Calculating P in SW\r\n");
-	int time_SW_pre, time_SW_post;
-	XScuTimer_Start(TimerInstancePtr); 	// Start the timer
-	time_SW_pre = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time
+
+	XScuTimer_Start(TimerInstancePtr); //Start timer
 	multiMatrixSoft(aInst, bTInst,pInst);
-	time_SW_post = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time
-	int time_elapsed_SW = time_SW_pre-time_SW_post; // Calculate elapsed time
+
+	int time_SW_post = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time in clock cycles
+	int time_elapsed_SW = ONE_SECOND - time_SW_post;	// Calculate elapsed time
+
 	xil_printf("P = \r\n");
 	displayMatrix(pInst);
 
+
+
 	// Multiply matrices in HW.
-	int time_HW_pre, time_HW_post;
+	int time_HW_post;
 	setInputMatrices(); // Make sure that matrices are "reset".
 	xil_printf("Calculating P in HW\r\n");
-	XScuTimer_Start(TimerInstancePtr); 	// Start the timer
-	time_HW_pre = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time
+
+	XScuTimer_RestartTimer(TimerInstancePtr); 	// Start the timer
 	multiMatrixHard(aInst, bTInst, pInst);
-	time_HW_post = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time
-	int time_elapsed_HW = time_HW_pre-time_HW_post; // Calculate elapsed time
+	time_HW_post = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time in clock cycles
+	int time_elapsed_HW = ONE_SECOND - time_HW_post; // Calculate elapsed time
+
 	xil_printf("P = \r\n");
 	displayMatrix(pInst);
+
 
 	//Display elapsed time of matrix multiplications
 	xil_printf("\r\n");

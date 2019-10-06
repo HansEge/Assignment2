@@ -26,9 +26,9 @@ int sc_main(int argc, char* argv[]) {
 
 	// Create a 10ns period clock signal
 	sc_clock s_clk("s_clk", 10, SC_NS);
-	tb_init U_tb_init(U_tb_init);
-	sc_combo_method U_dut(U_dut);
-	tb_driver U_tb_driver(U_tb_driver);
+	tb_init U_tb_init("U_tb_init");
+	sc_combo_method U_dut("U_dut");
+	tb_driver U_tb_driver("U_tb_driver");
 
 
 	// Generate a clock and reset to drive the sim
@@ -55,16 +55,16 @@ int sc_main(int argc, char* argv[]) {
 	
 	// Sim for 200
 	int end_time = 200;
-	cout << INFO: Simulating << endl;
+	cout << "INFO: Simulating" << endl;
 	
 	
 	// start simulation
 	sc_start(end_time, SC_NS);
 	if (U_tb_driver.retval != 0) {
-		printf(Test failed !!!\n);
+		printf("Test failed !!!\n");
 	}
 	else {
-		printf(Test passed !\n);
+		printf("Test passed !\n");
 	}
 	
 	
